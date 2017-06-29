@@ -1,0 +1,239 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 12, 2017, 5:46:17 PM
+    Author     : ZERO
+*/
+
+
+body .login {
+    width: 100%;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+/*Fondo sobre el video para desactivar el click */
+#img-filterBG {
+    background-image: url(../images/pattern.png);
+    background-color:  rgba(0,0,0,.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}  
+
+
+
+/*Filtro de puntos sobre el fondo*/
+#bg-filter {
+    background-image: url(../images/pattern.png);
+    background-color:  rgba(0,0,0,.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+
+
+
+/*nav ul {
+    margin-top: 3%;    
+    text-align: center;
+    background-image: url(../images/x.png);
+}
+
+nav ul li { 
+    display:inline-block; 
+    margin-right: 20px;
+    cursor: pointer;  
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    text-align: center;
+
+     
+   display:inline-block; para desplegar la lista de forma vertical
+   cursor: pointer;   para poner el cursor de manita cuando se pasa sobre el texto
+    
+      transicion, primer parametro es a cual se quiere aplicar, en este caso todas, 2- tiempo, 3- como va a ser la animacion
+     webkit para los navegadores q no lo reconocen,  
+}*/
+
+
+
+/*enlaces-----------------------------------------------------------------*/
+/*
+link {
+    color:  #33ccff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none !important; 
+}*/
+
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none !important; 
+    color: #00aeff;
+    -webkit-transition: color,0.2s;
+    transition: color .2s;
+
+
+    /*text-decoration: none; para remover lineado*/
+
+}
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: antiquewhite;
+}
+
+
+
+
+/*labels------------------------------------------------------------------------*/
+label {
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin: 0;
+}
+
+/*para quitar el titulo encabezado del label*/
+label.control-label {
+    display: none;
+}
+.control-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: .075em;
+    display: block;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+}
+
+/*div*/
+.login-group {
+    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+#help-links {
+    padding: 0;
+}
+/*el display block remueve los puntos de viñeta del elemento de lista*/
+#help-links li {
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+}
+
+
+/*div main container-------------------------------------------------------------*/
+
+.main-container {
+    position: relative;
+    min-height: 73%;
+    padding: 0;
+}
+
+
+.main-container  {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+body #login-wrapper {
+    padding: 50px;
+    margin: 30px;
+    align-content: center;
+}
+
+
+
+
+.login-box {
+    
+    position: relative;
+    margin: 0 0 auto 200px;
+    padding:  1px 10px;
+    min-width: 290px;
+    max-width: 500px;
+
+    z-index: 100;
+    background: rgb(34,34,34); /* for IE */
+    background: rgba(15,15,15,0.75);
+    box-shadow: 0 0 10px 1px #1e0606;
+
+}
+
+
+/*////////////////////////////////////////////*/
+/*SPINNER*/
+
+/*.spinner {
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+    0%, 100% { 
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% { 
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}*/
+
+
+

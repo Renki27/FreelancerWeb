@@ -1,0 +1,357 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 18, 2017, 11:37:41 PM
+    Author     : ZERO
+*/
+
+@font-face { 
+    font-family: "BigNoodle"; 
+    src: url('../Fonts/big_noodle_titling.eot'); /* IE9 Compat Modes */
+    src: url('../Fonts/big_noodle_titling.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../Fonts/big_noodle_titling.woff') format('woff'), /* Modern Browsers */
+        url('../Fonts/big_noodle_titling.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/big_noodle_titling.svg#svgFontName') format('svg'); /* Legacy iOS */
+    /*    font-weight: normal;
+        font-style: normal;*/
+} 
+body {
+    background-color: black;
+    min-width: 320px
+}
+
+body, html {
+    height: 100%
+}
+
+body .logo {
+    margin-top: 55px;
+    margin-bottom: 40px;
+}
+
+
+
+
+/*botones----------------------------------------------------------------------*/
+/*estilo del boton*/
+.btn-primary {
+    font-family: "BigNoodle";
+    background-color: #0e86ca;
+    color: #fff;
+    border: 1px solid #10a1de;
+    box-shadow: 0 0 rgba(0,0,0,0);
+    border-radius: 0;
+    -webkit-transition: background-color .2s,box-shadow .2s,background-color .2s,border-color .2s,color .2s;
+    transition: background-color .2s,box-shadow .2s,background-color .2s,border-color .2s,color .2s;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.15) inset;
+}
+
+.btn-primary:hover{
+    background-color: #2aa7ef;
+}
+
+.btn-primary:active {
+    background-color: #094e77
+}
+
+/*.btn {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 3px 0;
+    padding: 6px 20px;
+    font-size: 15px;
+    line-height: 20px;
+    height: 34px;
+    background-color: rgba(0,0,0,0.4);
+    color: #00aeff;
+    border: 1px solid #0d639f;
+    box-shadow: 0 0 rgba(0,0,0,0);
+    border-radius: 0;
+    -webkit-transition: background-color .2s,box-shadow .2s,background-color .2s,border-color .2s,color .2s;
+    transition: background-color .2s,box-shadow .2s,background-color .2s,border-color .2s,color .2s;
+}*/
+
+
+
+
+
+#footer {
+    margin-top: 10%;
+    font-family: "BigNoodle"; 
+    color: white;
+    background-image: url(../images/x.png);
+    background-color:  rgba(0,0,0,.4);
+    width: 100%;
+    height: 10%;
+    position: relative;
+    text-align: center;
+
+}
+
+
+div {
+    display: block;
+}
+
+form {
+    margin: 0;
+    display: block;
+}
+
+
+textarea{
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+    width: 100%;
+    height: 100px;
+
+}
+
+textarea {
+    box-shadow: inherit;
+    display: inline-block;
+    vertical-align: middle;
+
+    padding: 0 10px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.7);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+
+    transition: background-position .2s,background-color .2s,border-color .2s,box-shadow .2s;
+
+}
+
+textarea, textarea[placeholder] {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    size: 25px;
+}
+
+/*inputs------------------------------------------------------------*/
+/*para acceder a la propiedad placeholder de un input*/
+input, input[placeholder] {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    size: 15px;
+}
+
+input.input-large {
+    margin: 5px 0;
+    padding: 0 10px;
+    font-size: 17px;
+    line-height: 20px;
+    height: 40px;
+}
+
+.input-block {
+    width: 100%;
+}
+
+input:invalid, input:valid, input:required {
+    box-shadow: inherit;
+}
+
+/*estilo del input standard*/
+input {
+    font-family: 'Roboto', sans-serif;
+
+    box-shadow: inherit;
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    padding: 0 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.7);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+
+    transition: background-position .2s,background-color .2s,border-color .2s,box-shadow .2s;
+}
+
+/*checkbox inputs--------------------------------------------------*/
+.control-group p {
+    color: #00aeff;
+    font-family: 'Roboto', sans-serif;
+    height: 10px;
+    text-align: center;
+
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label {
+    color:#f2f2f2;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(../Images/check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(../Images/check_radio_sheet.png) -19px top no-repeat;
+    /*https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png*/
+}
+
+.checkbox-input-container label {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.checkbox-input-container {
+    margin-top: 7px;
+    display: block;
+    align-content: center;
+}
+
+.checkbox-inner-div {
+    width: 100%;
+    margin-left: 100px;
+    margin-top: 10px;
+    display: block;
+}
+
+/*radio inputs----------------------------------------------------*/
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+    color:#f2f2f2;
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(../Images/check_radio_sheet.png) -38px top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background:url(../Images/check_radio_sheet.png) -57px top no-repeat;
+}
+
+
+
+
+/*botones--------------------------------------------------------------------------*/
+/*Largo del boton*/
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*alto del boton*/
+.btn-large {
+    margin: 0;
+    padding: 9px 30px;
+    font-size: 20px;
+
+}
+
+
+/*fondos-----------------------------------------------------------------------*/
+#login-bg{
+    background-image: url(../Images/Backgrounds/main_bg.jpg);
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+
+}
+
+.static-bg {
+    background-image: url(../Images/Backgrounds/main_bg.jpg);
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+/*separadores span --------------------------------------------------------*/
+body .separator-line{
+    font-family: 'Roboto', sans-serif;
+    font-size:13px;
+    color:rgba(255,255,255,.3);
+    text-transform:uppercase;
+    display:block;
+    overflow:hidden;
+    white-space:nowrap;
+    margin:0 0 12px;
+    text-align: center;
+}
+body .separator-line span{
+    margin-top: 10px;
+    position:relative;
+    display:inline-block
+}
+body .separator-line span:after, 
+body .separator-line span:before{
+    width:500px;
+    content:"";
+    height:1px;
+    background-color:#fff;
+    background-color:rgba(255,255,255,.1);
+    position:absolute;
+    top:50%
+}
+
+body .separator-line span:before{
+    right:100%;
+    margin-right:20px
+}
+
+body .separator-line span:after{
+    left:100%;
+    margin-left:20px
+}
+
+
+
+/*box-------------------------------------*/
+.box-box {
+    position: relative;
+    display: block;
+    align-content: center;
+    
+    padding: 1px;
+    z-index: 100;
+    background: rgb(34,34,34);
+    background: rgba(15,15,15,0.75);
+    box-shadow: 0 0 10px 1px #1e0606;
+}
