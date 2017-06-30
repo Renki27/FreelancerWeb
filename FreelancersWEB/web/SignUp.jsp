@@ -21,6 +21,8 @@
         <script src="js/cleave-phone.cr.js" type="text/javascript"></script>
         <script src="Scripts/inputFormatter.js" type="text/javascript"></script>
         <!--    <script src="js/bootstrap.min.js"></script>-->
+        
+        <!--Hola prros XdxdDdXD-->
     </head >
     <body class="static-bg">
         <div class="main-container">
