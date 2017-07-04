@@ -239,7 +239,20 @@ fieldset {
     margin-bottom: 5px;
 }
 
+.help-block, .help-icon {
+    clear: both;
+    display: block;
+    margin-bottom: 10px;
+}
 
 .help-block [class^="icon-"], .help-block [class*=" icon-"] {
     cursor: pointer;
+}
+
+.icon-red {
+    background-image: url(../Images/sprite-16-red.3vUhX.png);
+}
+
+.icon-remove {
+    background-position: -112px -96px;
 }
