@@ -16,12 +16,13 @@
         <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
         <script src="Scripts/pictureLoader.js" type="text/javascript"></script>
         <script src="Scripts/accountTypeSelector.js" type="text/javascript"></script>
+        <script src="Scripts/validatePass.js" type="text/javascript"></script>
         <script src="Scripts/validateEmail.js" type="text/javascript"></script>
         <script src="js/cleave.min.js" type="text/javascript"></script>
         <script src="js/cleave-phone.cr.js" type="text/javascript"></script>
         <script src="Scripts/inputFormatter.js" type="text/javascript"></script>
         <!--    <script src="js/bootstrap.min.js"></script>-->
-        
+
         <!--Hola prros XdxdDdXD-->
     </head >
     <body class="static-bg">
@@ -87,12 +88,16 @@
                                         </div>
                                         <div class="control-group row-emailAdress">
                                             <input type="email" id="emailAddressConfirmation" name="emailAddressConfirmation" value="" placeholder="Confirm Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false"/>
+                                            <span id="emailAddressConfirmation-error-inline" class="help-block">
+                                                <i class="icon-remove icon-red"></i>This is not a valid e-mail address.
+                                            </span>
                                         </div>
                                         <div class="control-group row-password">
                                             <input type="password" id="password" name="password" value="" maxlength="16" placeholder="Password" class="password-input" autocapitalize="off" autocomplete="off" required="required" spellcheck="false"/>
                                         </div>
                                         <div class="control-group row-password">
-                                            <input type="password" id="rePassword" name="rePassword" value="" maxlength="16" placeholder="Confirm Password" class="password-input"/>
+                                            <input type="password" id="rePassword" name="rePassword" value="" maxlength="16" placeholder="Confirm Password" class="password-input" onkeyup="checkPass(); return false;"/>
+                                            <span id="password-error-inline" class="help-block"></span>
                                         </div>
                                     </fieldset>
                                     <fieldset>

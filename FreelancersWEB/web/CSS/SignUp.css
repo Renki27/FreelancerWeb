@@ -229,3 +229,17 @@ fieldset {
 #signnup-button {
     width: 50%;
 }
+
+
+
+/*wrong pass span*/
+.help-block {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+
+.help-block [class^="icon-"], .help-block [class*=" icon-"] {
+    cursor: pointer;
+}
