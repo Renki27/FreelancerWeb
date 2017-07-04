@@ -18,6 +18,8 @@
         <script src="Scripts/accountTypeSelector.js" type="text/javascript"></script>
         <script src="Scripts/validatePass.js" type="text/javascript"></script>
         <script src="Scripts/validateEmail.js" type="text/javascript"></script>
+        <script src="Scripts/jobsCheckboxCounter.js" type="text/javascript"></script>
+        <script src="Scripts/validateSignupForm.js" type="text/javascript"></script>
         <script src="js/cleave.min.js" type="text/javascript"></script>
         <script src="js/cleave-phone.cr.js" type="text/javascript"></script>
         <script src="Scripts/inputFormatter.js" type="text/javascript"></script>
@@ -87,22 +89,20 @@
                                             <input type="email" id="emailAddress" name="emailAddress" value="" placeholder="Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false" onblur="validateEmail(this)"/>
                                         </div>
                                         <div class="control-group row-emailAdress">
-                                            <input type="email" id="emailAddressConfirmation" name="emailAddressConfirmation" value="" placeholder="Confirm Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false"/>
-                                            <span id="emailAddressConfirmation-error-inline" class="help-block">
-                                                <i class="icon-remove icon-red"></i>This is not a valid e-mail address.
-                                            </span>
+                                            <input type="email" id="emailAddressConfirmation" name="emailAddressConfirmation" value="" placeholder="Confirm Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false"  onkeyup="checkEmail(); return false;"/>
+                                            <span id="emailAddressConfirmation-error-inline" class="help-block"></span>
                                         </div>
                                         <div class="control-group row-password">
                                             <input type="password" id="password" name="password" value="" maxlength="16" placeholder="Password" class="password-input" autocapitalize="off" autocomplete="off" required="required" spellcheck="false"/>
                                         </div>
                                         <div class="control-group row-password">
-                                            <input type="password" id="rePassword" name="rePassword" value="" maxlength="16" placeholder="Confirm Password" class="password-input" onkeyup="checkPass(); return false;"/>
+                                            <input type="password" id="rePassword" name="rePassword" value="" maxlength="16" placeholder="Confirm Password" class="password-input"  required="required" onkeyup="checkPass(); return false;"/>
                                             <span id="password-error-inline" class="help-block"></span>
                                         </div>
                                     </fieldset>
                                     <fieldset>
                                         <div id="description-ta" class="control-group">
-                                            <textarea   maxlength="265" name="description" placeholder="Work Description" cols="60" rows="4" wrap="hard"></textarea>
+                                            <textarea   maxlength="265" name="description" placeholder="Work Description" cols="60" rows="4" wrap="hard"  required="required"></textarea>
                                         </div>
                                         <div class="control-group">
 
@@ -112,32 +112,32 @@
                                                 <label id="load-image-label" class="grid-100" for="upload-photo">Load Image</label>
                                                 <input onclick="imagePicker()" id="upload-photo" class="file-upload grid-100" type="file" accept="image/*" required="required"/>
                                             </div>
-                                            <div id="jobs-checkbox-container"class="checkbox-input-container grid-50">
+                                            <div id="jobs-checkbox-container"class="checkbox-input-container grid-50" >
                                                 <p>Select your work Area(s):</p>
                                                 <div class="checkbox-inner-div">
-                                                    <input type="checkbox"  value="plumbing" id="pb"/>
+                                                    <input class="job-checkbox" type="checkbox"  value="plumbing" id="pb"/>
                                                     <label for="pb"> <span></span>Plumbing</label>
                                                 </div>
 
                                                 <div class="checkbox-inner-div">
-                                                    <input type="checkbox"  value="various-reparations" id="vr"/>
+                                                    <input class="job-checkbox" type="checkbox"  value="various-reparations" id="vr"/>
                                                     <label for="vr"> <span></span>Various Reparations</label>
                                                 </div>
                                                 <div class="checkbox-inner-div">
-                                                    <input type="checkbox" value="removals" id="rm"/>
+                                                    <input class="job-checkbox" type="checkbox" value="removals" id="rm"/>
                                                     <label for="rm"> <span></span>Removals</label>
                                                 </div>
 
                                                 <div class="checkbox-inner-div">
-                                                    <input type="checkbox" value="electrical-works" id="ew"/>
+                                                    <input class="job-checkbox" type="checkbox" value="electrical-works" id="ew"/>
                                                     <label for="ew"> <span></span>Electrical Works</label>
                                                 </div>
                                                 <div class="checkbox-inner-div">
-                                                    <input type="checkbox" value="cleaning" id="cn"/>
+                                                    <input class="job-checkbox" type="checkbox" value="cleaning" id="cn"/>
                                                     <label for="cn"> <span></span>Cleaning</label>
                                                 </div>                  
                                                 <div class="checkbox-inner-div">
-                                                    <input type="checkbox" value="errands" id="er"/>
+                                                    <input class="job-checkbox" type="checkbox" value="errands" id="er"/>
                                                     <label for="er"> <span></span>Errands</label>
                                                 </div>
 
@@ -146,7 +146,7 @@
                                     </fieldset>
 
                                     <div id="signup-submit">
-                                        <button id="signnup-button" type="submit" class="btn-primary btn-large btn-block" >Sign Up</button>
+                                        <button id="signnup-button" type="submit" class="btn-primary btn-large btn-block"  onclick="submitForm()">Sign Up</button>
                                     </div>
                                 </form>
 

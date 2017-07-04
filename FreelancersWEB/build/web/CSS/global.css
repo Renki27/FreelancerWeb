@@ -348,10 +348,14 @@ body .separator-line span:after{
     position: relative;
     display: block;
     align-content: center;
-    
+
     padding: 1px;
     z-index: 100;
     background: rgb(34,34,34);
     background: rgba(15,15,15,0.75);
     box-shadow: 0 0 10px 1px #1e0606;
+}
+
+i {
+    font-style: italic;
 }
