@@ -1,9 +1,4 @@
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
-
++ src/
 
 # Compiled class file
 *.class
