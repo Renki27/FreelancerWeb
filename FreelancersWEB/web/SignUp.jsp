@@ -1,10 +1,6 @@
-<%-- 
-    Document   : SignUp
-    Created on : Jun 12, 2017, 7:09:06 PM
-    Author     : ZERO
---%>
-
+<%@page import="java.beans.Beans"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,7 +45,7 @@
                                     </div>                               
                                 </div>
 
-                                <form action="" id="account-creation" method="post" novalidate="novalidate">
+                                <form action="SignUpManager.jsp" method="post" onsubmit="" id="account-creation" novalidate="novalidate">
                                     <fieldset class="first"> 
                                         <div class="control-group">
                                             <div class="grid-50">

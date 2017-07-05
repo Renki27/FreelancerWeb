@@ -11,26 +11,38 @@ package Classes;
  */
 public class Account {
 
-    private U user;
+    private User user;
+    protected boolean activated;
 
     public Account() {
     }
 
-    public Account(U user) {
+    public Account(User user, boolean activated) {
         this.user = user;
+        this.activated = activated;
     }
 
-    public U getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(U user) {
+    public void setUser(User user) {
         this.user = user;
+    }
+
+    public boolean isActivated() {
+        return activated;
+    }
+
+    public void setActivated(boolean activated) {
+        this.activated = activated;
     }
 
     @Override
     public String toString() {
-        return "Account{" + "user=" + user + '}';
+        return "Account{" + "user=" + user + ", activated=" + activated + '}';
     }
+    
+    
 
 }
