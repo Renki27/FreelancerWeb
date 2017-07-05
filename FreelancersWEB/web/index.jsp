@@ -10,9 +10,8 @@
         <link href="CSS/login.css" rel="stylesheet">
         <!--<link rel="icon" type="image/png" href="images/Icons/shenlong.png">-->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <script src="Scripts/LoadingPage.js" type="text/javascript"></script>
     </head>
-    <body onload="hideLoader()">
+    <body>
 
         <div class="vid-container">
             <%@include file="header.jsp" %>

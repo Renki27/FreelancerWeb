@@ -14,7 +14,7 @@
         <script src="Scripts/accountTypeSelector.js" type="text/javascript"></script>
         <script src="Scripts/validatePass.js" type="text/javascript"></script>
         <script src="Scripts/validateEmail.js" type="text/javascript"></script>
-        <script src="Scripts/jobsCheckboxCounter.js" type="text/javascript"></script>
+        <!--<script src="Scripts/jobsCheckboxCounter.js" type="text/javascript"></script>-->
         <script src="Scripts/validateSignupForm.js" type="text/javascript"></script>
         <script src="js/cleave.min.js" type="text/javascript"></script>
         <script src="js/cleave-phone.cr.js" type="text/javascript"></script>
@@ -82,7 +82,7 @@
                                     </fieldset>
                                     <fieldset>
                                         <div class="control-group row-emailAdress">
-                                            <input type="email" id="emailAddress" name="emailAddress" value="" placeholder="Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false" onblur="validateEmail(this)"/>
+                                            <input type="email" id="emailAddress" name="emailAddress" value="" placeholder="Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false"/>
                                         </div>
                                         <div class="control-group row-emailAdress">
                                             <input type="email" id="emailAddressConfirmation" name="emailAddressConfirmation" value="" placeholder="Confirm Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false"  onkeyup="checkEmail(); return false;"/>

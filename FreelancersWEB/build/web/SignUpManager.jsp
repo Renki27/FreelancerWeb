@@ -1,20 +1,18 @@
+<%@page import="javax.swing.JOptionPane"%>
 <%@page import="Classes.User"%>
 <%@page import="Classes.Account"%>
 <%@page import="Classes.FileWriterManager"%>
-<%@page pageEncoding="UTF-8" language="java" isErrorPage="false" errorPage="index.jsp"%>
 
 
-<jsp:useBean id="user" scope="session" type="User" />
-
-
-<%-- validaciÃ³n para obtener el nick de la pagina de registro y asignarlo al bean--%>
+<%-- validación para obtener el nick de la pagina de registro y asignarlo al bean--%>
 <%
+
     String firstname = "";
     String lastname = "";
     String emailAddress = "";
     String password = "";
     String imageURL = "";
-    String filename = "accounts.bin";
+    String filename = application.getRealPath("/") + "AccountList.bin";
     FileWriterManager writer = new FileWriterManager();
 
     if (!"".equals(request.getParameter("firstname"))) {
@@ -32,7 +30,6 @@
     if (!"".equals(request.getParameter("password"))) {
         password = request.getParameter("password");
     }
-
     if (!"".equals(request.getParameter("password"))) {
         password = request.getParameter("password");
     }
@@ -41,10 +38,15 @@
     }
 
     User user = new User(firstname, lastname, emailAddress, password, imageURL);
+
+    System.out.println(user.toString());
     Account account = new Account(user, false);
-    writer.loadFile(filename);
-    writer.writeFile(account);
-    writer.closeFile();
+    System.out.println(account.toString());
+    if (writer.loadFile(filename)) {
+        writer.writeFile(account);
+        writer.closeFile();
+    }
+
     response.sendRedirect("index.jsp");
 %>
 
