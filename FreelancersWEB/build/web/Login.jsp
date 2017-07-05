@@ -59,7 +59,7 @@
                                 <a href="SignUp.jsp">Create a Free Account</a>
                             </li>
                             <li>
-                                <a href="index.jsp">Can’t log in?</a>
+                                <a href="CantLogin.jsp">Can’t log in?</a>
                             </li>
                         </ul>   
                     </div>

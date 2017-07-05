@@ -89,6 +89,7 @@ body .logo {
     height: 10%;
     position: relative;
     text-align: center;
+     background-attachment: fixed;
 
 }
 
@@ -301,6 +302,8 @@ input[type="radio"]:checked + label span {
     background-size: 100%;
     background-position: top center;
     background-repeat: no-repeat;
+     background-attachment: fixed;
+    
 }
 
 /*separadores span --------------------------------------------------------*/
