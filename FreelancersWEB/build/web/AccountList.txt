@@ -1,1 +1,2 @@
+Account{user=User{name=, lastName=, email=, pass=, image=null}, activated=false}
 Account{user=User{name=123, lastName=123, email=123, pass=123, image=null}, activated=false}

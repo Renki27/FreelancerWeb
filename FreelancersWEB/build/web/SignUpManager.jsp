@@ -12,7 +12,7 @@
     String emailAddress = "";
     String password = "";
     String imageURL = "";
-    String filename = application.getRealPath("/") + "AccountList.bin";
+    String filename = application.getRealPath("/") + "AccountList.txt"; //bin
     FileWriterManager writer = new FileWriterManager();
 
     if (!"".equals(request.getParameter("firstname"))) {
@@ -33,20 +33,18 @@
     if (!"".equals(request.getParameter("password"))) {
         password = request.getParameter("password");
     }
-    if (!"".equals(request.getParameter("upload-photo"))) {
-        imageURL = request.getParameter("upload-photo");
+    if (!"".equals(request.getParameter("imgT"))) {
+        imageURL = request.getParameter("imgT");
     }
 
     User user = new User(firstname, lastname, emailAddress, password, imageURL);
 
-    System.out.println(user.toString());
     Account account = new Account(user, false);
-    System.out.println(account.toString());
     if (writer.loadFile(filename)) {
         writer.writeFile(account);
         writer.closeFile();
     }
 
-    response.sendRedirect("index.jsp");
+//    response.sendRedirect("index.jsp");
 %>
 
