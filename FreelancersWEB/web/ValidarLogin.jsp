@@ -4,6 +4,7 @@
     Author     : alelizmu
 --%>
 
+<%@page import="Classes.FileReaderManager"%>
 <%@page import="javafx.scene.control.Alert"%>
 <%@page import="javax.swing.JOptionPane"%>
 <%@page import="java.io.EOFException"%>
@@ -25,47 +26,38 @@
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        ArrayList<Account> listaCuentas = new ArrayList();
-        String filename = application.getRealPath("/") + "AccountList.txt";
+        ArrayList<Account> accountList = new ArrayList();
+        String filename = application.getRealPath("/") + "AccountList.bin";
+        FileReaderManager reader = new FileReaderManager();
 
-        FileInputStream lector = new FileInputStream(filename);
+        if (reader.openFile(filename)) {
+            Account acount = reader.readFile();
+            while (acount != null) {
+                accountList.add(acount);
+ //               System.out.println(acount);
+                acount = reader.readFile();
 
-        Account persona;
-
-        String carpeta = application.getRealPath("/") + "AccountList.txt";
-        File directorio = new File(carpeta);
-        int bytes = (int) directorio.length();
-//
-        int tamaño = bytes / 246;
-
-        for (int i = 0; i < tamaño; i++) {
-            try {
-                ObjectInputStream in = new ObjectInputStream(lector);
-                persona = (Account) in.readObject();
-                listaCuentas.add(persona);
-            } catch (EOFException e) {
-                break;
             }
         }
-        lector.close();
+        reader.closeFile();
 
-        Account cuentaPorValidar = null;
-        for (int idx = 0; idx < listaCuentas.size(); idx++) {
-            if (listaCuentas.get(idx).getUser().getEmail().equals(email)) {
-                cuentaPorValidar = listaCuentas.get(idx);
+        Account validatingAccount = null;
+        for (int idx = 0; idx < accountList.size(); idx++) {
+            if (accountList.get(idx).getUser().getEmail().equals(email)) {
+                validatingAccount = accountList.get(idx);
             }
         }
 
-        if (cuentaPorValidar.getUser().getPass().equals(password) && cuentaPorValidar.getActivated()) {
+        if (validatingAccount.getUser().getPass().equals(password) && validatingAccount.getActivated()) {
             response.sendRedirect("LoginExitoso.jsp");
         } else {
-            if (cuentaPorValidar.getUser().getPass().equals(password) && !cuentaPorValidar.getActivated()) {
-                request.getSession().setAttribute("cuenta", cuentaPorValidar);
-                request.getSession().setAttribute("listaCuentas", listaCuentas);
+            if (validatingAccount.getUser().getPass().equals(password) && !validatingAccount.getActivated()) {
+                request.getSession().setAttribute("cuenta", validatingAccount);
+                request.getSession().setAttribute("listaCuentas", validatingAccount);
                 response.sendRedirect("VerificacionCuenta.jsp");
             } else {
-                  out.println("<script>alert('Usuario o contraseña incorrecta');</script>");
-                response.sendRedirect("Login.jsp");
+                out.println("<script>alert('Wrong username or password');</script>");
+                response.sendRedirect("index.jsp");
             }
         }
 

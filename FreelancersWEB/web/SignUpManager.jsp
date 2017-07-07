@@ -28,7 +28,7 @@
     String emailAddress = "";
     String password = "";
     String imageURL = "";
-    String filename = application.getRealPath("/") + "AccountList.txt";
+    String filename = application.getRealPath("/") + "AccountList.bin";
     ObjectOutputStream writer =  new ObjectOutputStream(new FileOutputStream(filename, true));
 
     if (!"".equals(request.getParameter("firstname"))) {
@@ -87,6 +87,6 @@
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
-//    response.sendRedirect("index.jsp");
+    response.sendRedirect("Login.jsp");
 %>
 
