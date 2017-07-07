@@ -4,6 +4,16 @@
     Author     : ZERO
 --%>
 
+<%@page import="java.io.File"%>
+<%@page import="Classes.User"%>
+<%@page import="Classes.Account"%>
+<%@page import="java.io.FileReader"%>
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.io.EOFException"%>
+<%@page import="java.io.FileInputStream"%>
+<%@page import="java.io.ObjectInputStream"%>
+<%@page import="Classes.FileReaderManager"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,6 +25,8 @@
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><!--URL de JQuery -->
 
     </head>
+
+  
     <body class="static-bg">
         <div class="main-container">
             <h1 class="logo">Account Login</h1>
@@ -23,7 +35,7 @@
                 <div class="input" id="login-wrapper">
                     <div class="login" >
 
-                        <form action method="post" id="login-form" novalidate="novalidate">
+                        <form action="ValidarLogin.jsp" method="post" id="login-form" novalidate="novalidate">
 
                             <div id="login-input-container">
 
@@ -41,14 +53,10 @@
                                     </div>
                                 </div>
 
-                            </div>
-                            <div>
+                            </div>                                          
+                            <div>                           
                                 <button type="submit" class="btn-primary btn-large btn-block" >Log in</button>
                             </div>
-
-
-
-
                         </form>
                         <div class="separator-line">
                             <span>"OR"</span>
