@@ -19,7 +19,7 @@ public class Main {
          ContractorUserBuilder co = new ContractorUserBuilder();
          NormalBuilderUser no = new NormalBuilderUser();
          
-         String type = "Contractor";
+         String type = "Normal";
          
          if (type.toLowerCase().equals("normal")) {
 
@@ -32,7 +32,7 @@ public class Main {
          }
          else {
              di.setUserBuilderC(co);
-             di.createContratistUser("Max", "Acuña", "email", "pass", "image", "id", "location", "act", "days",
+             di.createContratistUser("ERW", "Acuña", "email", "pass", "image", "id", "location", "act", "days",
                      "phone", "des", 0);
              ContractorUser con = di.getContractor();
              JOptionPane.showMessageDialog(null, con.toString());

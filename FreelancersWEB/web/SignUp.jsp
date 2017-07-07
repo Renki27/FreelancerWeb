@@ -21,7 +21,6 @@
         <script src="Scripts/inputFormatter.js" type="text/javascript"></script>
         <!--    <script src="js/bootstrap.min.js"></script>-->
 
-        <!--Hola prros XdxdDdXD-->
     </head >
     <body class="static-bg">
         <div class="main-container">
@@ -107,6 +106,8 @@
                                                 <img class="profile-pic grid-100" src="Images/no-thumbnail.jpg" />
                                                 <label id="load-image-label" class="grid-100" for="upload-photo">Load Image</label>
                                                 <input onclick="imagePicker()" id="upload-photo" class="file-upload grid-100" type="file" accept="image/*" required="required"/>
+                                                <input type="hidden" id="avatar-image" name="avatar-src"/>
+                                                <p id="imgT"></p>
                                             </div>
                                             <div id="jobs-checkbox-container"class="checkbox-input-container grid-50" >
                                                 <p>Select your work Area(s):</p>

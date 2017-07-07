@@ -54,6 +54,10 @@ public class User implements Serializable {
         this.lastName = lastName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -65,18 +69,10 @@ public class User implements Serializable {
     public void setImage(String image) {
         this.image = image;
     }
-    
-    
 
     @Override
     public String toString() {
         return name + " " + lastName + " " + email + " " + pass + " " + image;
     }
-
-    String getLastName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
 
 }
