@@ -28,13 +28,8 @@
     String emailAddress = "";
     String password = "";
     String imageURL = "";
-<<<<<<< HEAD
     String filename = application.getRealPath("/") + "AccountList.txt";
     ObjectOutputStream writer =  new ObjectOutputStream(new FileOutputStream(filename, true));
-=======
-    String filename = application.getRealPath("/") + "AccountList.txt"; //bin
-    FileWriterManager writer = new FileWriterManager();
->>>>>>> 31bd4c2eea21fc4d99271093608fe0a7cee6b64a
 
     if (!"".equals(request.getParameter("firstname"))) {
         firstname = request.getParameter("firstname");
@@ -60,8 +55,6 @@
 
     User user = new User(firstname, lastname, emailAddress, password, imageURL);
 
-<<<<<<< HEAD
-    System.out.println(user.toString());
     double numeroRandom = Math.random() * 9999 + 1;;
     int random = (int) numeroRandom;
     Account account = new Account(user, false, random);
@@ -94,14 +87,6 @@
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
-=======
-    Account account = new Account(user, false);
-    if (writer.loadFile(filename)) {
-        writer.writeFile(account);
-        writer.closeFile();
-    }
->>>>>>> 31bd4c2eea21fc4d99271093608fe0a7cee6b64a
-
 //    response.sendRedirect("index.jsp");
 %>
 
