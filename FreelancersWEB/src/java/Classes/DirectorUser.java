@@ -10,59 +10,55 @@ package Classes;
  * @author Erik
  */
 public class DirectorUser {
-    
-    private BuilderUsers builderUser;
-    private BuilderUsersC builderContratist;
-    
-     void createNormalUser(String name,String lastName,String email,String pass,String image) {
-         
-        builderUser.create();
-        builderUser.buildName(name);
-        builderUser.buildLastNamel(lastName);
-        builderUser.buildEmail(email);
-        builderUser.buildPass(pass);
-        builderUser.buildImage(image);
-    }
-     
-     void createContratistUser(String name,String lastName,String email,String pass,String image,
-     String id,String location,String activity,String days,String phone,String description,int price){
-     
-        builderContratist.create();
-        builderContratist.buildName(name);
-        builderContratist.buildLastNamel(lastName);
-        builderContratist.buildEmail(email);
-        builderContratist.buildPass(pass);
-        builderContratist.buildImage(image);
-        builderContratist.buildId(id);
-        builderContratist.buildlocation(location);
-        builderContratist.buildActivitys(activity);
-        builderContratist.buildDays(days);
-        builderContratist.buildPhone(phone);
-        builderContratist.buildDescription(description);
-        builderContratist.buildPrice(price);
-     
-     }
-    
-    public void setUserBuilder(BuilderUsers bu) {
-        builderUser = bu;
-    }
-    
-     public void setUserBuilderC(BuilderUsersC bu) {
-        builderContratist = bu;
-    }
-    
-    
 
-    public User getUserBuilder() {
-        return builderUser.getUser();
+    private BuilderUsers buildNormalUser;
+    private BuilderUsersC buildContractor;
+
+    public void createNormalUser(String name, String lastName, String email, String pass, String image) {
+
+        buildNormalUser.create();
+        buildNormalUser.buildName(name);
+        buildNormalUser.buildLastName(lastName);
+        buildNormalUser.buildEmail(email);
+        buildNormalUser.buildPass(pass);
+        buildNormalUser.buildImage(image);
     }
-    
-    public ContractorUser getContractor(){
-    
-        return builderContratist.getUser();
-    
+
+    public void createContratistUser(String name, String lastName, String email, String pass, String image,
+            String id, String location, String activity, String days, String phone, String description, double price) {
+
+        buildContractor.create();
+        buildContractor.buildName(name);
+        buildContractor.buildLastName(lastName);
+        buildContractor.buildEmail(email);
+        buildContractor.buildPass(pass);
+        buildContractor.buildImage(image);
+        buildContractor.buildId(id);
+        buildContractor.buildlocation(location);
+        buildContractor.buildActivitys(activity);
+        buildContractor.buildDays(days);
+        buildContractor.buildPhone(phone);
+        buildContractor.buildDescription(description);
+        buildContractor.buildPrice(price);
+
     }
-    
-    
-    
+
+    public void setUserBuilder(BuilderUsers bu) {
+        buildNormalUser = bu;
+    }
+
+    public void setUserBuilderC(BuilderUsersC bu) {
+        buildContractor = bu;
+    }
+
+    public NormalUser getNormalUser() {
+        return buildNormalUser.getUser();
+    }
+
+    public ContractorUser getContractor() {
+
+        return buildContractor.getUser();
+
+    }
+
 }

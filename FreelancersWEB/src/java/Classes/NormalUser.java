@@ -11,6 +11,9 @@ package Classes;
  */
 public class NormalUser extends User {
 
+    public NormalUser() {
+    }
+
     public NormalUser(String name, String lastName, String email, String pass, String image) {
         super(name, lastName, email, pass, image);
     }
@@ -19,7 +22,5 @@ public class NormalUser extends User {
     public String toString() {
         return super.toString();
     }
-    
-    
 
 }

@@ -105,9 +105,7 @@
                                                 <p>Select you profile picture:</p>
                                                 <img class="profile-pic grid-100" src="Images/no-thumbnail.jpg" />
                                                 <label id="load-image-label" class="grid-100" for="upload-photo">Load Image</label>
-                                                <input onclick="imagePicker()" id="upload-photo" class="file-upload grid-100" type="file" accept="image/*" required="required"/>
-                                                <input type="hidden" id="avatar-image" name="avatar-src"/>
-                                                <p id="imgT"></p>
+                                                <input onclick="imagePicker()" id="upload-photo" name="image-src" class="file-upload grid-100" type="file" accept="image/*" required="required"/>
                                             </div>
                                             <div id="jobs-checkbox-container"class="checkbox-input-container grid-50" >
                                                 <p>Select your work Area(s):</p>

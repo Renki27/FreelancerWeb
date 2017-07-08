@@ -9,18 +9,17 @@
 <%@page import="java.io.FileOutputStream"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Account"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+
+
     <%
-        Account account = (Account) session.getAttribute("cuenta");
-        ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("listaCuentas");
-        int codigo = Integer.parseInt(request.getParameter("codigo"));
+        Account account = (Account) session.getAttribute("account");
+        ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
+        String verificationCode = request.getParameter("verificationCode");
         String filename = application.getRealPath("/") + "AccountList.bin";
         FileWriterManager writer = new FileWriterManager();
 
         for (int i = 0; i < listaCuentas.size(); i++) {
-            if (listaCuentas.get(i).getCode() == codigo) {
+            if (listaCuentas.get(i).getCode().equals(verificationCode)) {
                 account.setActivated(true);
                 listaCuentas.set(i, account);
                 break;
@@ -34,10 +33,10 @@
             writer.closeFile();
         }
 
-        if (account.getCode() == codigo) {
+        if (account.getCode().equals(verificationCode)) {
             response.sendRedirect("LoginExitoso.jsp");
         } else {
             response.sendRedirect("Login.jsp");
         }
     %>
-</html>
+

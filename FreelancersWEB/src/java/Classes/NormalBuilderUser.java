@@ -9,7 +9,7 @@ package Classes;
  *
  * @author Erik
  */
-public class NormalBuilderUser extends BuilderUsers{
+public class NormalBuilderUser extends BuilderUsers {
 
     @Override
     public void buildName(String name) {
@@ -17,25 +17,25 @@ public class NormalBuilderUser extends BuilderUsers{
     }
 
     @Override
-    public void buildLastNamel(String lastName) {
-        
+    public void buildLastName(String lastName) {
+
         user.setLastName(lastName);
     }
 
     @Override
     public void buildEmail(String email) {
         user.setEmail(email);
-      
+
     }
 
     @Override
     public void buildPass(String pass) {
-     user.setPass(pass);
+        user.setPass(pass);
     }
 
     @Override
     public void buildImage(String image) {
-      user.setImage(image);
+        user.setImage(image);
     }
-    
+
 }
