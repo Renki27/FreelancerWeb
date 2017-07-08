@@ -4,6 +4,7 @@
     Author     : alelizmu
 --%>
 
+<%@page import="Classes.FileWriterManager"%>
 <%@page import="java.io.ObjectOutputStream"%>
 <%@page import="java.io.FileOutputStream"%>
 <%@page import="java.util.ArrayList"%>
@@ -11,21 +12,32 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<%Account cuenta = (Account) session.getAttribute("cuenta");
-    ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("listaCuentas");
-    int codigo = Integer.parseInt(request.getParameter("codigo"));
-    String filename = application.getRealPath("/") + "AccountList.txt";
-    ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(filename, true));
+    <%
+        Account account = (Account) session.getAttribute("cuenta");
+        ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("listaCuentas");
+        int codigo = Integer.parseInt(request.getParameter("codigo"));
+        String filename = application.getRealPath("/") + "AccountList.bin";
+        FileWriterManager writer = new FileWriterManager();
 
+        for (int i = 0; i < listaCuentas.size(); i++) {
+            if (listaCuentas.get(i).getCode() == codigo) {
+                account.setActivated(true);
+                listaCuentas.set(i, account);
+                break;
+            }
+        }
 
+        if (writer.loadFileReplace(filename)) {
+            for (int i = 0; i < listaCuentas.size(); i++) {
+                writer.writeFile(listaCuentas.get(i));
+            }
+            writer.closeFile();
+        }
 
-    if (cuenta.getCode() == codigo) {
-          cuenta.setActivated(true);
-          writer.writeObject(cuenta);
-          writer.close();
-        response.sendRedirect("LoginExitoso.jsp");
-    } else {
-        response.sendRedirect("Login.jsp");
-    }
-%>
+        if (account.getCode() == codigo) {
+            response.sendRedirect("LoginExitoso.jsp");
+        } else {
+            response.sendRedirect("Login.jsp");
+        }
+    %>
 </html>

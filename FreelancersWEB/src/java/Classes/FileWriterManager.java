@@ -21,6 +21,17 @@ public class FileWriterManager {
         }
     }
 
+    public boolean loadFileReplace(String filename) {
+        try {
+            writer = new ObjectOutputStream(new FileOutputStream(filename));
+            return true;
+        } catch (IOException ex) {
+            System.err.println("Error creating file");
+            System.err.println(ex);
+            return false;
+        }
+    }
+
     public void writeFile(Account account) {
         try {
             writer.writeObject(account);
@@ -41,7 +52,7 @@ public class FileWriterManager {
             System.err.println(ex);
         }
     }
-    
+
 //        private BufferedWriter escritor;
 //
 //    public boolean loadFile(String nombreArchivo) {

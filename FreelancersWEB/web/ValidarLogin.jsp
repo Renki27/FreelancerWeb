@@ -53,7 +53,7 @@
         } else {
             if (validatingAccount.getUser().getPass().equals(password) && !validatingAccount.getActivated()) {
                 request.getSession().setAttribute("cuenta", validatingAccount);
-                request.getSession().setAttribute("listaCuentas", validatingAccount);
+                request.getSession().setAttribute("listaCuentas", accountList);
                 response.sendRedirect("VerificacionCuenta.jsp");
             } else {
                 out.println("<script>alert('Wrong username or password');</script>");

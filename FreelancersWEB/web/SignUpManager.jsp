@@ -29,7 +29,7 @@
     String password = "";
     String imageURL = "";
     String filename = application.getRealPath("/") + "AccountList.bin";
-    ObjectOutputStream writer =  new ObjectOutputStream(new FileOutputStream(filename, true));
+    FileWriterManager writer =  new FileWriterManager();
 
     if (!"".equals(request.getParameter("firstname"))) {
         firstname = request.getParameter("firstname");
@@ -58,14 +58,13 @@
     double numeroRandom = Math.random() * 9999 + 1;;
     int random = (int) numeroRandom;
     Account account = new Account(user, false, random);
-    System.out.println(account.toString());
-    writer.writeObject(account);
-    writer.close();
-//    if (writer.loadFile(filename)) {
-//        writer.writeFile(account);
-//        writer.closeFile();
-//    }
-//    
+//    System.out.println(account.toString());
+
+    if (writer.loadFile(filename)) {
+        writer.writeFile(account);
+        writer.closeFile();
+    }
+    
             Session conection = Session.getInstance(props,
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {

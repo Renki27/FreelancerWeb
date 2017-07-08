@@ -14,8 +14,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%Account cuenta = (Account)session.getAttribute("cuenta");
-        ArrayList<Account> listaCuentas = (ArrayList)session.getAttribute("listaCuentas");
+        <%
+            Account cuenta = (Account) session.getAttribute("cuenta");
+            ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("listaCuentas");
 
         %>
         <h1>Hola <%=cuenta.getUser().getName()%> su cuenta no ha sido verificada, ingrese el codigo que le llego al correo para su verificacion</h1>
