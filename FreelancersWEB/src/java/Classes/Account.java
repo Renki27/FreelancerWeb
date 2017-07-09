@@ -11,19 +11,18 @@ import java.io.Serializable;
  *
  * @author ZERO
  */
-public class Account implements Serializable{
+public class Account implements Serializable {
 
     private User user;
     protected boolean activated;
-    private int code = 0;
     private Preguntas pregunta;
+    private String code;
+    private String accountType;
 
     public Account() {
     }
 
-    
-    
-    public Account(User user, boolean activated, int code) {
+    public Account(User user, boolean activated, String code, String accountType) {
         this.user = user;
         this.activated = activated;
         this.code = code;
@@ -39,12 +38,12 @@ public class Account implements Serializable{
     }
  
     
-    
-    public int getCode() {
+
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -52,7 +51,6 @@ public class Account implements Serializable{
         return user;
     }
 
-    
     public void setUser(User user) {
         this.user = user;
     }
@@ -65,11 +63,17 @@ public class Account implements Serializable{
         this.activated = activated;
     }
 
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
     @Override
     public String toString() {
-        return  user + " " + activated + " " +code;
+        return "Account{" + "user=" + user + ", activated=" + activated + ", code=" + code + ", accountType=" + accountType + '}';
     }
-    
-    
 
 }
