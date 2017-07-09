@@ -16,26 +16,8 @@
         Account account = (Account) session.getAttribute("cuenta");
         ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("listaCuentas");
         int codigo = Integer.parseInt(request.getParameter("codigo"));
-        String filename = application.getRealPath("/") + "AccountList.bin";
-        FileWriterManager writer = new FileWriterManager();
-
-        for (int i = 0; i < listaCuentas.size(); i++) {
-            if (listaCuentas.get(i).getCode() == codigo) {
-                account.setActivated(true);
-                listaCuentas.set(i, account);
-                break;
-            }
-        }
-
-        if (writer.loadFileReplace(filename)) {
-            for (int i = 0; i < listaCuentas.size(); i++) {
-                writer.writeFile(listaCuentas.get(i));
-            }
-            writer.closeFile();
-        }
-
         if (account.getCode() == codigo) {
-            response.sendRedirect("LoginExitoso.jsp");
+            response.sendRedirect("Preguntas.jsp");
         } else {
             response.sendRedirect("Login.jsp");
         }

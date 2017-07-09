@@ -30,11 +30,11 @@
 
                             <div id="form-container">
                                 <form action="SecurityQuestions.jsp" id="account-creation" method="post" novalidate="novalidate" >
-                                    <h3 style="text-align: center; color: white; padding-top: 50px;">Ingrese el nombre de usuario con el cual se registro</h3>
+                                    <h3 style="text-align: center; color: white; padding-top: 50px;">Ingrese el correo con el cual se registro</h3>
                                     <div class="grid-50" style="width: 100%; margin-top: 20px; display: flex; align-items: center; justify-content: center; padding-bottom: 30px;">
-                                        <input type="text" id="nickName" name="nickName" value="" 
+                                        <input type="text" id="email" name="email" value="" 
                                                autocapitalize="on" autocomplete="off" autocorrect="off" 
-                                               maxlength="25" placeholder="Nick Name" required="required" 
+                                               maxlength="25" required="required" 
                                                spellcheck="off">/> 
                                     </div>
                           
@@ -42,20 +42,15 @@
                                         <img src="Images/recordarContraseña.png" style="width: 100px; height: 100px;"/> 
                                     </center>
                                    
-                                    <div id="signup-submit" >
-                                       
-                                      
+                                    <div id="signup-submit" >                                   
                                         <button type="submit"class="boton"> <img class="imagen "src="Images/Enviar.png" ></button>
                                     </div>
-                                </form>
-                               
+                                </form>                             
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
         <%@include file="footer.html" %>
     </body>

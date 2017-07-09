@@ -4,16 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/ValidarLogin.jsp</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/BuilderUsers.java</file>
             <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CantLogin.jsp</file>
             <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Login.jsp</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/LoginExitoso.jsp</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/global.css</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/Account.java</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/VerificacionCuenta.jsp</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CambiarVerificada.jsp</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/SecurityQuestions.jsp</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/SignUpManager.jsp</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/newcss.css</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/login.css</file>
         </group>
     </open-files>
 </project-private>

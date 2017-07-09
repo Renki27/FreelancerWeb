@@ -16,6 +16,7 @@ public class Account implements Serializable{
     private User user;
     protected boolean activated;
     private int code = 0;
+    private Preguntas pregunta;
 
     public Account() {
     }
@@ -26,8 +27,19 @@ public class Account implements Serializable{
         this.user = user;
         this.activated = activated;
         this.code = code;
+        this.pregunta = pregunta;
+    }
+
+    public Preguntas getPregunta() {
+        return pregunta;
+    }
+
+    public void setPregunta(Preguntas pregunta) {
+        this.pregunta = pregunta;
     }
  
+    
+    
     public int getCode() {
         return code;
     }

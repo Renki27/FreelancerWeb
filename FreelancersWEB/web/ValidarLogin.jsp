@@ -25,6 +25,7 @@
     <%
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+       //  ArrayList<Account> accountList = (ArrayList) session.getAttribute("listaCuentas");
 
         ArrayList<Account> accountList = new ArrayList();
         String filename = application.getRealPath("/") + "AccountList.bin";
@@ -41,23 +42,29 @@
         }
         reader.closeFile();
 
+     //   System.out.println("hola");
+       request.getSession().setAttribute("listaCuentas", accountList);
         Account validatingAccount = null;
         for (int idx = 0; idx < accountList.size(); idx++) {
-            if (accountList.get(idx).getUser().getEmail().equals(email)) {
+            if (accountList.get(idx).getUser().getEmail().equals(email)) {             
                 validatingAccount = accountList.get(idx);
             }
         }
-
-        if (validatingAccount.getUser().getPass().equals(password) && validatingAccount.getActivated()) {
+ 
+       //  System.out.println("valido esto " + validatingAccount.getActivated());
+       String contraseña1 = validatingAccount.getUser().getPass();
+       String contraseña2 = password;
+        if (contraseña1.equals(contraseña2) && validatingAccount.getActivated()) {
             response.sendRedirect("LoginExitoso.jsp");
         } else {
-            if (validatingAccount.getUser().getPass().equals(password) && !validatingAccount.getActivated()) {
+            if (contraseña1.equals(contraseña2) && !validatingAccount.getActivated()) {
                 request.getSession().setAttribute("cuenta", validatingAccount);
-                request.getSession().setAttribute("listaCuentas", accountList);
+                request.getSession().setAttribute("listaCuentas", accountList); 
                 response.sendRedirect("VerificacionCuenta.jsp");
             } else {
-                out.println("<script>alert('Wrong username or password');</script>");
-                response.sendRedirect("index.jsp");
+             
+                response.sendRedirect("Login.jsp?error=Correo o Contraseña incorrectas");
+                
             }
         }
 

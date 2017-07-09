@@ -40,6 +40,17 @@ body .login {
     position: absolute;
 }
 
+.errorContraseña{
+    
+    color: white; 
+    text-align: center; 
+    background-color: gray; 
+    border: 3px solid black;
+    opacity: 0.9;
+}
+
+
+
 
 
 
