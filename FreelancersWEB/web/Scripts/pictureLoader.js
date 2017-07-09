@@ -10,10 +10,11 @@ function imagePicker() {
             };
 
             reader.readAsDataURL(input.files[0]);
-            var avatar = document.getElementById('upload-photo').value;
-            $('input[name="avatar-src"]').val(avatar);
-            var p = document.getElementById('imgT');
-            p.innerHTML = avatar;
+//            var avatar = document.getElementById('upload-photo').value;
+//            alert(avatar);
+//            $('input[name="avatar-src"]').val(avatar);
+//            var p = document.getElementById('imgT');
+//            p.innerHTML = avatar;
         }
     };
 

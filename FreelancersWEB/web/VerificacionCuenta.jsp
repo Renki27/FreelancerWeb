@@ -15,20 +15,20 @@
     </head>
     <body>
         <%
-            Account cuenta = (Account) session.getAttribute("cuenta");
-            ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("listaCuentas");
+            Account cuenta = (Account) session.getAttribute("account");
+            ArrayList<Account> accountList = (ArrayList) session.getAttribute("accountList");
 
         %>
-        <h1>Hola <%=cuenta.getUser().getName()%> su cuenta no ha sido verificada, ingrese el codigo que le llego al correo para su verificacion</h1>
+        <h1>Hello! <%=cuenta.getUser().getName()%>Your account has not been activated yet, Please open your mail and paste the code here!</h1>
 
-        <form action="CambiarVerificada.jsp" id="codigo" method="post" novalidate="novalidate" >
-            <h3 style=""class="textoPregunta">Digite el codigo</h3>
+        <form action="CambiarVerificada.jsp" id="setVerify-form" method="post" novalidate="novalidate" >
+            <h3 style=""class="textoPregunta">Please enter your code</h3>
             <div>
-                <input type="text" id="codigo" name="codigo" value="" 
+                <input type="text" id="verification-code" name="verificationCode" value="" 
                        autocapitalize="on" required="required" 
                        spellcheck="off">
             </div>
-            <button type="submit"class="boton"> <img class="imagen "src="Images/Enviar.png" style="width: 300px; height: 100px"></button>
+            <button type="submit" class="btn-primary btn-large btn-block">Verify</button>
         </form>
     </body>
 </html>

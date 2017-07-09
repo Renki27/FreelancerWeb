@@ -10,11 +10,11 @@ package Classes;
  * @author Erik
  */
 public class ContractorUser extends User {
-    
+
     private String id;
-    private String location; 
-    private String activitys; 
-    private String daysAndHours; 
+    private String location;
+    private String activitys;
+    private String daysAndHours;
     private String phoneNumber;
     private String description;
     private double pricePerHour;
@@ -88,16 +88,11 @@ public class ContractorUser extends User {
     public void setPricePerHour(double pricePerHour) {
         this.pricePerHour = pricePerHour;
     }
-    
-    
 
     @Override
     public String toString() {
-        return "Contractor User "+"\nUser: "+super.getName()+"\nApellido: "+super.getLastName()+"\nEmail: "+super.getEmail()+"\nPass: "+super.getPass()+
-             "\nImage: "+super.getImage()+ "\nid = " + id + ",\nlocation = " + location + ",\nactivitys = " + activitys + ",\ndaysAndHours = " + daysAndHours + ",\nphoneNumber = " + phoneNumber + ",\ndescription = " + description + ",\npricePerHour = " + pricePerHour + '}';
+        return "Contractor User " + "\nUser: " + super.getName() + "\nApellido: " + super.getLastName() + "\nEmail: " + super.getEmail() + "\nPass: " + super.getPass()
+                + "\nImage: " + super.getImage() + "\nid = " + id + ",\nlocation = " + location + ",\nactivitys = " + activitys + ",\ndaysAndHours = " + daysAndHours + ",\nphoneNumber = " + phoneNumber + ",\ndescription = " + description + ",\npricePerHour = " + pricePerHour + '}';
     }
-    
-    
-    
-    
+
 }

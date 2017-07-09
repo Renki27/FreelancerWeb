@@ -56,10 +56,11 @@
        String contraseña2 = password;
         if (contraseña1.equals(contraseña2) && validatingAccount.getActivated()) {
             response.sendRedirect("LoginExitoso.jsp");
-        } else {
-            if (contraseña1.equals(contraseña2) && !validatingAccount.getActivated()) {
-                request.getSession().setAttribute("cuenta", validatingAccount);
-                request.getSession().setAttribute("listaCuentas", accountList); 
+        } else { 
+
+            if (validatingAccount.getUser().getPass().equals(password) && !validatingAccount.getActivated()) {
+                request.getSession().setAttribute("account", validatingAccount);
+                request.getSession().setAttribute("accountList", accountList);
                 response.sendRedirect("VerificacionCuenta.jsp");
             } else {
              

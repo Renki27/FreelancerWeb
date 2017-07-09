@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>logor entrar</h1>
+        <h1>logro entrar</h1>
     </body>
 </html>
