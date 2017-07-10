@@ -4,6 +4,7 @@
     Author     : alelizmu
 --%>
 
+<%@page import="Classes.ContractorUser"%>
 <%@page import="Classes.FileReaderManager"%>
 <%@page import="javafx.scene.control.Alert"%>
 <%@page import="javax.swing.JOptionPane"%>
@@ -55,7 +56,10 @@
        String contraseña1 = validatingAccount.getUser().getPass();
        String contraseña2 = password;
         if (contraseña1.equals(contraseña2) && validatingAccount.getActivated()) {
-            response.sendRedirect("LoginExitoso.jsp");
+            request.getSession().setAttribute("account", validatingAccount);
+            request.getSession().setAttribute("accountList", accountList);
+            response.sendRedirect("LoginExitosoContractor.jsp");
+            
         } else { 
 
             if (validatingAccount.getUser().getPass().equals(password) && !validatingAccount.getActivated()) {

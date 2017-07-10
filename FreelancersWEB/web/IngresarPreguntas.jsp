@@ -16,8 +16,8 @@
         <title>JSP Page</title>
     </head>
     <%
-          Account account = (Account) session.getAttribute("cuenta");
-        ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("listaCuentas");
+          Account account = (Account) session.getAttribute("account");
+        ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
         String pregunta1 = request.getParameter("pregunta1");
         String pregunta2 = request.getParameter("pregunta2");
         String pregunta3 = request.getParameter("pregunta3");

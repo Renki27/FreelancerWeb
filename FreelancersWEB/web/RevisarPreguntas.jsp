@@ -34,7 +34,7 @@
     String mensaje1 = "nada";
     String mensaje2 = pregunta1 + " " + pregunta2 + " " + pregunta3 + " " + pregunta4 + " " + pregunta5;
 
-    ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("listaCuentas");
+    ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
                String filename = application.getRealPath("/") + "AccountList.bin";
                 FileWriterManager writer = new FileWriterManager();
     for (int i = 0; i < listaCuentas.size(); i++) {

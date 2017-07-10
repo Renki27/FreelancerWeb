@@ -91,11 +91,10 @@
     if (accountType.equals("contractor")) {
         directorUser.setUserBuilderC(contractorBuilder);
         directorUser.createContratistUser(firstname, lastname, emailAddress, password, imageURL, id, "none", "none", "none",
-                phone, description, price);
+        phone, description, price);
         account = new Account(directorUser.getContractor(), false, verificationCode, "CONTRACTOR");
         System.out.println(account.toString());
     } else if (accountType.equals("normal")) {
-
         directorUser.setUserBuilder(normalBuilder);
         directorUser.createNormalUser(firstname, lastname, emailAddress, password, imageURL);
         account = new Account(directorUser.getNormalUser(), false, verificationCode, "NORMAL");
