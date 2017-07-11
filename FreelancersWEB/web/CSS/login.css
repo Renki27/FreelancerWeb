@@ -41,7 +41,7 @@ body .login {
 }
 
 .errorContraseña{
-    
+
     color: white; 
     text-align: center; 
     background-color: gray; 
@@ -186,7 +186,7 @@ body #login-wrapper {
 
 
 .login-box {
-    
+
     position: relative;
     margin: 0 0 auto 200px;
     padding:  1px 10px;

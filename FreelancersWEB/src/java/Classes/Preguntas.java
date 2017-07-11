@@ -12,11 +12,12 @@ import java.io.Serializable;
  * @author alelizmu
  */
 public class Preguntas implements Serializable {
-   private String pregunta1 = "";
-   private String pregunta2 = "";
-   private String pregunta3 = "";
-   private String pregunta4 = "";
-   private String pregunta5 = "";
+
+    private String pregunta1 = "";
+    private String pregunta2 = "";
+    private String pregunta3 = "";
+    private String pregunta4 = "";
+    private String pregunta5 = "";
 
     public Preguntas(String pregunta1, String pregunta2, String pregunta3, String pregunta4, String pregunta5) {
         this.pregunta1 = pregunta1;
@@ -70,7 +71,5 @@ public class Preguntas implements Serializable {
     public String toString() {
         return pregunta1 + " " + pregunta2 + " " + pregunta3 + " " + pregunta4 + " " + pregunta5;
     }
-   
-   
-   
+
 }

@@ -22,15 +22,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="CSS/global.css" rel="stylesheet">
         <link href="CSS/login.css" rel="stylesheet">
-        
+
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><!--URL de JQuery -->
 
     </head>
-<%
+    <%
 
 
-%>
-  
+    %>
+
     <body class="static-bg">
         <div class="main-container">
             <h1 class="logo">Account Login</h1>
@@ -77,7 +77,7 @@
                         <br>
                         <%if (request.getParameter("error") != null) {%>
                         <h3 class="errorContraseña">Correo o contraseña incorrecta<br><a href="CantLogin.jsp" style="font-size: 18px;">¿Olvidaste tu contraseña?</a></h3>
-                        <%}%>
+                            <%}%>
                     </div>
                 </div>
             </div>

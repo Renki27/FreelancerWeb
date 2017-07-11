@@ -10,7 +10,7 @@ package Classes;
  * @author alelizmu
  */
 public class Request {
-    
+
     private String customerName;
     private String description;
     private String location;
@@ -37,7 +37,7 @@ public class Request {
     public void setValue(boolean value) {
         this.value = value;
     }
-    
+
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
@@ -73,6 +73,5 @@ public class Request {
     public void setHora(String hora) {
         this.hora = hora;
     }
-    
-    
+
 }

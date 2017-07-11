@@ -37,11 +37,11 @@
                                                maxlength="25" required="required" 
                                                spellcheck="off">/> 
                                     </div>
-                          
+
                                     <center>
                                         <img src="Images/recordarContraseña.png" style="width: 100px; height: 100px;"/> 
                                     </center>
-                                   
+
                                     <div id="signup-submit" >                                   
                                         <button type="submit"class="boton"> <img class="imagen "src="Images/Enviar.png" ></button>
                                     </div>
