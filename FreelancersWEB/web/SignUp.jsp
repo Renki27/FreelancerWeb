@@ -109,29 +109,28 @@
                                             <div id="jobs-checkbox-container"class="checkbox-input-container grid-50" >
                                                 <p>Select your work Area(s):</p>
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox"  value="plumbing" id="pb" name="jobs"/>
+                                                    <input class="job-checkbox" type="checkbox"  value="plumbing" id="pb" name="plumbing"/>
                                                     <label for="pb"> <span></span>Plumbing</label>
                                                 </div>
-
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox"  value="various-reparations" id="vr" name="jobs"/>
+                                                    <input class="job-checkbox" type="checkbox"  value="various-reparations" id="vr" name="varoius-reparations"/>
                                                     <label for="vr"> <span></span>Various Reparations</label>
                                                 </div>
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox" value="removals" id="rm" name="jobs"/>
+                                                    <input class="job-checkbox" type="checkbox" value="removals" id="rm" name="removals"/>
                                                     <label for="rm"> <span></span>Removals</label>
                                                 </div>
 
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox" value="electrical-works" id="ew" name="jobs"/>
+                                                    <input class="job-checkbox" type="checkbox" value="electrical-works" id="ew" name="electrical-works"/>
                                                     <label for="ew"> <span></span>Electrical Works</label>
                                                 </div>
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox" value="cleaning" id="cn" name="jobs"/>
+                                                    <input class="job-checkbox" type="checkbox" value="cleaning" id="cn" name="cleaning"/>
                                                     <label for="cn"> <span></span>Cleaning</label>
                                                 </div>                  
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox" value="errands" id="er" name="jobs"/>
+                                                    <input class="job-checkbox" type="checkbox" value="errands" id="er" name="errands"/>
                                                     <label for="er"> <span></span>Errands</label>
                                                 </div>
 

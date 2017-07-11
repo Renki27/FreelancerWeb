@@ -5,6 +5,8 @@
  */
 package Classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Erik
@@ -25,7 +27,7 @@ public class DirectorUser {
     }
 
     public void createContratistUser(String name, String lastName, String email, String pass, String image,
-            String id, String location, String activity, String days, String phone, String description, double price) {
+            String id, String location, String activity, String days, String phone, String description, double price, ArrayList<String> jobList ) {
 
         buildContractor.create();
         buildContractor.buildName(name);
@@ -40,6 +42,7 @@ public class DirectorUser {
         buildContractor.buildPhone(phone);
         buildContractor.buildDescription(description);
         buildContractor.buildPrice(price);
+        buildContractor.buildJobsList(jobList);
 
     }
 
