@@ -17,8 +17,8 @@ and open the template in the editor.
 }
 
 .info{
-text-align:center; 
-color: white   
+    text-align:center; 
+    color: white   
 }
 
 .imagen:hover {
@@ -48,7 +48,7 @@ color: white
     text-align: center;
     color: white; 
 
-    
+
 }
 
 .linea{

@@ -36,8 +36,6 @@ public class Account implements Serializable {
     public void setPregunta(Preguntas pregunta) {
         this.pregunta = pregunta;
     }
- 
-    
 
     public String getCode() {
         return code;

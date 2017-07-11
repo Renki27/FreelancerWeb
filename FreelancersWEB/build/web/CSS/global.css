@@ -33,30 +33,30 @@ body .logo {
 }
 
 .button {
-        margin-left: 10px;
-        margin-rigth: 20px;
-        background-color: gray;
-	display: inline-block;
-	outline: none;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	font: 14px/100% Arial, Helvetica, sans-serif;
-	padding: .5em 2em .55em;
-	text-shadow: 0 1px 1px rgba(0,0,0,.3);
-	-webkit-border-radius: .5em; 
-	-moz-border-radius: .5em;
-	border-radius: .5em;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    margin-left: 10px;
+    margin-rigth: 20px;
+    background-color: gray;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 .button:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 .button:active {
-	position: relative;
-	top: 1px;
+    position: relative;
+    top: 1px;
 }
 
 
@@ -114,7 +114,7 @@ body .logo {
     height: 10%;
     position: relative;
     text-align: center;
-     background-attachment: fixed;
+    background-attachment: fixed;
 
 }
 
@@ -327,8 +327,8 @@ input[type="radio"]:checked + label span {
     background-size: 100%;
     background-position: top center;
     background-repeat: no-repeat;
-     background-attachment: fixed;
-    
+    background-attachment: fixed;
+
 }
 
 /*separadores span --------------------------------------------------------*/

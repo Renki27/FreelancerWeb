@@ -3,11 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/LoginExitosoContractor.jsp</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/ContractorUser.java</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/newcss.css</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/Solicitud.java</file>
             <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/global.css</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/ContractorUser.java</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/Account.java</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/IngresarPreguntas.jsp</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/SignUpManager.jsp</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/LoginExitosoContractor.jsp</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/LoginExitosoUser.jsp</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/RevisarPreguntas.jsp</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/ValidarLogin.jsp</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/SignUp.jsp</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/Request.java</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/newcss.css</file>
+            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Preguntas.jsp</file>
         </group>
     </open-files>
 </project-private>

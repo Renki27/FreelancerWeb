@@ -11,7 +11,7 @@ function checkEmail() {
     var message = document.getElementById('emailAddressConfirmation-error-inline');
     var goodColor = "#66cc66";
     var badColor = "#cd0606";
-    
+
 //    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 //    var emailTest = /^[\\w-]+(\\.[\\w-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/;
 //    if (emailTest.test(email.value) === false) {

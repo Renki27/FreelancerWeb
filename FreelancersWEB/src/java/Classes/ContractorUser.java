@@ -20,7 +20,7 @@ public class ContractorUser extends User {
     private String phoneNumber;
     private String description;
     private double pricePerHour;
-    private ArrayList <Request> requestList;
+    private ArrayList<Request> requestList;
 
     public ContractorUser() {
     }
@@ -44,7 +44,7 @@ public class ContractorUser extends User {
         this.requestList = requestList;
     }
 
-    public void addRequest(Request request){
+    public void addRequest(Request request) {
         requestList.add(request);
     }
 

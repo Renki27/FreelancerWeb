@@ -16,7 +16,7 @@
         <title>JSP Page</title>
     </head>
     <%
-          Account account = (Account) session.getAttribute("account");
+        Account account = (Account) session.getAttribute("account");
         ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
         String pregunta1 = request.getParameter("pregunta1");
         String pregunta2 = request.getParameter("pregunta2");
@@ -43,6 +43,6 @@
             writer.closeFile();
         }
 
-        response.sendRedirect("LoginExitoso.jsp");
+        response.sendRedirect("Login.jsp");
     %>
 </html>

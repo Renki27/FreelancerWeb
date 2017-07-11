@@ -11,12 +11,12 @@
 <%@page import="Classes.Account"%>
 
 
-    <%
-        Account account = (Account) session.getAttribute("account");
-        ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
-        String verificationCode = request.getParameter("verificationCode");
-        String filename = application.getRealPath("/") + "AccountList.bin";
-        FileWriterManager writer = new FileWriterManager();
+<%
+    Account account = (Account) session.getAttribute("account");
+    ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
+    String verificationCode = request.getParameter("verificationCode");
+    String filename = application.getRealPath("/") + "AccountList.bin";
+    FileWriterManager writer = new FileWriterManager();
 
 //        for (int i = 0; i < listaCuentas.size(); i++) {
 //            if (listaCuentas.get(i).getCode().equals(verificationCode)) {
@@ -33,10 +33,10 @@
 //            writer.closeFile();
 //        }
 
-        if (account.getCode().equals(verificationCode)) {
-             response.sendRedirect("Preguntas.jsp");
-        } else {
-            response.sendRedirect("Login.jsp");
-        }
-    %>
+    if (account.getCode().equals(verificationCode)) {
+         response.sendRedirect("Preguntas.jsp");
+    } else {
+        response.sendRedirect("Login.jsp");
+    }
+%>
 

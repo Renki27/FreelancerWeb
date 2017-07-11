@@ -52,67 +52,66 @@
 
                                     <div id="agenda-conteiner">
                                         <center>
-                                        <table style="background-color: white;" > 
+                                            <table style="background-color: white;" > 
+                                                <br>
+                                                <br>
+                                                <tr>
+                                                    <td><strong>/////////////////</strong></td>
+                                                    <td><strong>Lunes</strong></td>
+                                                    <td><strong>Martes</strong></td>
+                                                    <td><strong>Miercoles</strong></td>
+                                                    <td><strong>Jueves</strong></td>
+                                                    <td><strong>Viernes</strong></td>
+                                                    <td><strong>Sabado</strong></td>
+
+                                                </tr>                                          
+                                                <tr><td style="text-align: center">8:00am 9:00am</td> 
+
+                                                    <td><button id="8Lu" class="botonAgenda" onclick="setColor('8Lu')"></button></td> 
+                                                    <td><button id="8Ma" class="botonAgenda" onclick="setColor('8Ma')"></button></td> 
+                                                    <td><button id="8Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green " onclick="setColor('8Mi')"></button></td> 
+                                                    <td><button id="8Ju" class="botonAgenda" onclick="setColor('8Ju')"></button></td> 
+                                                    <td><button id="8Vi" class="botonAgenda" onclick="setColor('8Vi')"></button></td>  
+                                                    <td><button id="8Sa" class="botonAgenda" onclick="setColor('8Sa')"></button></td>  
+
+                                                </tr>
+
+                                                <tr><td style="text-align: center">10:00am 11:00am</td> 
+                                                    <td><button id="10Lu" class="botonAgenda" onclick="setColor('10Lu')"></button></td> 
+                                                    <td><button id="10Ma" class="botonAgenda" onclick="setColor('10Ma')"></button></td> 
+                                                    <td><button id="10Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green "onclick="setColor('10Mi')"></button></td> 
+                                                    <td><button id="10Ju" class="botonAgenda" onclick="setColor('10Ju')"></button></td> 
+                                                    <td><button id="10Vi" class="botonAgenda" onclick="setColor('10Vi')"></button></td>  
+                                                    <td><button id="10Sa" class="botonAgenda" onclick="setColor('10Sa')"></button></td>                                              
+                                                </tr>
+                                                <tr><td style="text-align: center">12:00md 1:00pm</td> 
+                                                    <td><button id="12Lu" class="botonAgenda" onclick="setColor('12Lu')"></button></td> 
+                                                    <td><button id="12Ma" class="botonAgenda" onclick="setColor('12Ma')"></button></td> 
+                                                    <td><button id="12Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green" onclick="setColor('12Mi')"></button></td> 
+                                                    <td><button id="12Ju" class="botonAgenda" onclick="setColor('12Ju')"></button></td> 
+                                                    <td><button id="12Vi" class="botonAgenda" onclick="setColor('12Vi')"></button></td>  
+                                                    <td><button id="12Sa" class="botonAgenda" onclick="setColor('12Sa')"></button></td>                                                  
+                                                </tr>
+                                                <tr><td style="text-align: center">2:00pm 3:00om</td> 
+                                                    <td><button id="2Lu" class="botonAgenda" onclick="setColor('2Lu')"></button></td> 
+                                                    <td><button id="2Ma" class="botonAgenda" onclick="setColor('2Ma')"></button></td> 
+                                                    <td><button id="2Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green " onclick="setColor('2Mi')"></button></td> 
+                                                    <td><button id="2Ju" class="botonAgenda" onclick="setColor('2Ju')"></button></td> 
+                                                    <td><button id="2Vi" class="botonAgenda" onclick="setColor('2Vi')"></button></td>  
+                                                    <td><button id="2Sa" class="botonAgenda" onclick="setColor('2Sa')"></button></td>                                                 
+                                                </tr>
+                                                <tr><td style="text-align: center">4:00pm 5:00pm</td> 
+                                                    <td><button id="4Lu" class="botonAgenda" onclick="setColor('4Lu')"></button></td> 
+                                                    <td><button id="4Ma" class="botonAgenda" onclick="setColor('4Ma')"></button></td> 
+                                                    <td><button id="4Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green " onclick="setColor('4Mi')"></button></td> 
+                                                    <td><button id="4Ju" class="botonAgenda" onclick="setColor('4Ju')"></button></td> 
+                                                    <td><button id="4Vi" class="botonAgenda" onclick="setColor('4Vi')"></button></td>  
+                                                    <td><button id="4Sa" class="botonAgenda" onclick="setColor('4Sa')"></button></td>                                                
+                                                </tr>
+                                            </table>
                                             <br>
                                             <br>
-                                            <tr>
-                                                <td><strong>/////////////////</strong></td>
-                                                <td><strong>Lunes</strong></td>
-                                                <td><strong>Martes</strong></td>
-                                                <td><strong>Miercoles</strong></td>
-                                                <td><strong>Jueves</strong></td>
-                                                <td><strong>Viernes</strong></td>
-                                                <td><strong>Sabado</strong></td>
-                                                
-                                            </tr>
-                                            
-                                            <tr><td style="text-align: center">8:00am 9:00am</td> 
-                                               
-                                                <td><button id="8Lu" class="botonAgenda" onclick="setColor('8Lu')"></button></td> 
-                                                <td><button id="8Ma" class="botonAgenda" onclick="setColor('8Ma')"></button></td> 
-                                                <td><button id="8Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green " onclick="setColor('8Mi')"></button></td> 
-                                                <td><button id="8Ju" class="botonAgenda" onclick="setColor('8Ju')"></button></td> 
-                                                <td><button id="8Vi" class="botonAgenda" onclick="setColor('8Vi')"></button></td>  
-                                                <td><button id="8Sa" class="botonAgenda" onclick="setColor('8Sa')"></button></td>  
-                                               
-                                            </tr>
-                                            
-                                               <tr><td style="text-align: center">10:00am 11:00am</td> 
-                                                <td><button id="10Lu" class="botonAgenda" onclick="setColor('10Lu')"></button></td> 
-                                                <td><button id="10Ma" class="botonAgenda" onclick="setColor('10Ma')"></button></td> 
-                                                <td><button id="10Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green "onclick="setColor('10Mi')"></button></td> 
-                                                <td><button id="10Ju" class="botonAgenda" onclick="setColor('10Ju')"></button></td> 
-                                                <td><button id="10Vi" class="botonAgenda" onclick="setColor('10Vi')"></button></td>  
-                                                <td><button id="10Sa" class="botonAgenda" onclick="setColor('10Sa')"></button></td>                                              
-                                            </tr>
-                                            <tr><td style="text-align: center">12:00md 1:00pm</td> 
-                                                <td><button id="12Lu" class="botonAgenda" onclick="setColor('12Lu')"></button></td> 
-                                                <td><button id="12Ma" class="botonAgenda" onclick="setColor('12Ma')"></button></td> 
-                                                <td><button id="12Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green" onclick="setColor('12Mi')"></button></td> 
-                                                <td><button id="12Ju" class="botonAgenda" onclick="setColor('12Ju')"></button></td> 
-                                                <td><button id="12Vi" class="botonAgenda" onclick="setColor('12Vi')"></button></td>  
-                                                <td><button id="12Sa" class="botonAgenda" onclick="setColor('12Sa')"></button></td>                                                  
-                                            </tr>
-                                               <tr><td style="text-align: center">2:00pm 3:00om</td> 
-                                                <td><button id="2Lu" class="botonAgenda" onclick="setColor('2Lu')"></button></td> 
-                                                <td><button id="2Ma" class="botonAgenda" onclick="setColor('2Ma')"></button></td> 
-                                                <td><button id="2Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green " onclick="setColor('2Mi')"></button></td> 
-                                                <td><button id="2Ju" class="botonAgenda" onclick="setColor('2Ju')"></button></td> 
-                                                <td><button id="2Vi" class="botonAgenda" onclick="setColor('2Vi')"></button></td>  
-                                                <td><button id="2Sa" class="botonAgenda" onclick="setColor('2Sa')"></button></td>                                                 
-                                            </tr>
-                                            <tr><td style="text-align: center">4:00pm 5:00pm</td> 
-                                                <td><button id="4Lu" class="botonAgenda" onclick="setColor('4Lu')"></button></td> 
-                                                <td><button id="4Ma" class="botonAgenda" onclick="setColor('4Ma')"></button></td> 
-                                                <td><button id="4Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green " onclick="setColor('4Mi')"></button></td> 
-                                                <td><button id="4Ju" class="botonAgenda" onclick="setColor('4Ju')"></button></td> 
-                                                <td><button id="4Vi" class="botonAgenda" onclick="setColor('4Vi')"></button></td>  
-                                                <td><button id="4Sa" class="botonAgenda" onclick="setColor('4Sa')"></button></td>                                                
-                                            </tr>
-                                        </table>
-                                            <br>
-                                            <br>
-                                            </center>
+                                        </center>
                                     </div>
 
                                     <div id="bandeja-conteiner" style="display:none;">
@@ -252,16 +251,16 @@
                 $("#MenuAccount").hide();
                 $("#editAccount").show();
             }
-            
-            function setColor(id){
+
+            function setColor(id) {
                 var property = document.getElementById(id);
-                
-             if (property.style.backgroundColor === 'red') {
-                 property.style.backgroundColor = 'green';
-            
-              } else {
-                 property.style.backgroundColor = 'red';
-              }
+
+                if (property.style.backgroundColor === 'red') {
+                    property.style.backgroundColor = 'green';
+
+                } else {
+                    property.style.backgroundColor = 'red';
+                }
             }
         </script>
     </body>
