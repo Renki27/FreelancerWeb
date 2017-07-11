@@ -5,6 +5,8 @@
  */
 package Classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Erik
@@ -44,5 +46,7 @@ public abstract class BuilderUsersC {
     public abstract void buildDescription(String des);
 
     public abstract void buildPrice(double price);
+
+    public abstract void buildJobsList(ArrayList<String> jobList);
 
 }

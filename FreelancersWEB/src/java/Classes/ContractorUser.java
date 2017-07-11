@@ -21,11 +21,11 @@ public class ContractorUser extends User {
     private String description;
     private double pricePerHour;
     private ArrayList<Request> requestList;
-
+    private ArrayList<String> jobList;
     public ContractorUser() {
     }
 
-    public ContractorUser(String id, String location, String activitys, String daysAndHours, String phoneNumber, String description, double pricePerHour, String name, String lastName, String email, String pass, String image) {
+    public ContractorUser(String id, String location, String activitys, String daysAndHours, String phoneNumber, String description, double pricePerHour, String name, String lastName, String email, String pass, String image, ArrayList<String> jobList) {
         super(name, lastName, email, pass, image);
         this.id = id;
         this.location = location;
@@ -34,6 +34,7 @@ public class ContractorUser extends User {
         this.phoneNumber = phoneNumber;
         this.description = description;
         this.pricePerHour = pricePerHour;
+        this.jobList = jobList;
     }
 
     public ArrayList<Request> getRequestList() {
@@ -102,6 +103,14 @@ public class ContractorUser extends User {
 
     public void setPricePerHour(double pricePerHour) {
         this.pricePerHour = pricePerHour;
+    }
+
+    public ArrayList<String> getJobList() {
+        return jobList;
+    }
+
+    public void setJobList(ArrayList<String> jobList) {
+        this.jobList = jobList;
     }
 
     @Override

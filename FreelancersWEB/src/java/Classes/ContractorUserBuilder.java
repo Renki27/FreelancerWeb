@@ -5,6 +5,8 @@
  */
 package Classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Erik
@@ -71,6 +73,11 @@ public class ContractorUserBuilder extends BuilderUsersC {
     @Override
     public void buildPrice(double price) {
         user.setPricePerHour(price);
+    }
+
+    @Override
+    public void buildJobsList(ArrayList<String> jobList) {
+        user.setJobList(jobList);
     }
 
 }

@@ -39,7 +39,7 @@
     String description = "";
     String filename = application.getRealPath("/") + "AccountList.bin";
     String accountType = "contractor";
-    String[] jobsList;
+    ArrayList<String> jobsList = new ArrayList();
 
     Account account = null;
     FileWriterManager writer = new FileWriterManager();
@@ -91,11 +91,21 @@
             description = request.getParameter("description");
         }
 
-        jobsList = request.getParameterValues("sports");
-        if (jobsList != null) {
-            for (int i = 0; i < jobsList.length; i++) {
-                out.println("<b>" + jobsList[i] + "<b>");
-            }
+        //jobs checkbox
+        if (request.getParameter("plumbing") != null) {
+            jobsList.add(request.getParameter("plumbing"));
+        }
+        if (request.getParameter("varoius-reparations") != null) {
+            jobsList.add(request.getParameter("varoius-reparations"));
+        }
+        if (request.getParameter("electrical-works") != null) {
+            jobsList.add(request.getParameter("electrical-works"));
+        }
+        if (request.getParameter("cleaning") != null) {
+            jobsList.add(request.getParameter("cleaning"));
+        }
+        if (request.getParameter("errands") != null) {
+            jobsList.add(request.getParameter("errands"));
         }
 
     } else if (accountType.equals("normal")) {
@@ -122,15 +132,13 @@
 
     String verificationCode = codeGenerator.generateRandomChars();
 
-    if (accountType.equals(
-            "contractor")) {
+    if (accountType.equals("contractor")) {
         directorUser.setUserBuilderC(contractorBuilder);
         directorUser.createContratistUser(firstname, lastname, emailAddress, password, imageURL, id, "none", "none", "none",
-                phone, description, price);
+                phone, description, price, jobsList);
         account = new Account(directorUser.getContractor(), false, verificationCode, "CONTRACTOR");
         System.out.println(account.toString());
-    } else if (accountType.equals(
-            "normal")) {
+    } else if (accountType.equals("normal")) {
         directorUser.setUserBuilder(normalBuilder);
         directorUser.createNormalUser(firstname, lastname, emailAddress, password, imageURL);
         account = new Account(directorUser.getNormalUser(), false, verificationCode, "NORMAL");
