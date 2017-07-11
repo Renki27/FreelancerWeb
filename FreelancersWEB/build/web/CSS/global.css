@@ -33,8 +33,8 @@ body .logo {
 }
 
 .button {
-        margin-left: 40px;
-        margin-rigth: 40px;
+        margin-left: 10px;
+        margin-rigth: 20px;
         background-color: gray;
 	display: inline-block;
 	outline: none;

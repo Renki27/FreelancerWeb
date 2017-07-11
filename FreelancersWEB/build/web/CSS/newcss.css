@@ -1109,3 +1109,28 @@ button.disabled-loading .spinner-battlenet {
         font-size: 13px
     }
 }
+
+table {     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            font-size: 17px; 
+            margin-left: -38px;
+            width: 480px; 
+            text-align: left;    
+            border-collapse: collapse; 
+}
+
+th {     font-size: 13px;     
+         font-weight: normal;    
+         padding: 8px;    
+         background: #b9c9fe;
+         border-top: 4px solid #aabcfe;    
+         border-bottom: 1px solid #fff; 
+         color: #039; }
+
+td {    padding: 8px;    
+        background: #e8edff;     
+        border-bottom: 1px solid #fff;
+        color: #669;   
+        
+        border: 2px solid #5878ca;
+}
+

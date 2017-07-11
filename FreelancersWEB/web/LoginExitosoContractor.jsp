@@ -14,6 +14,7 @@
         <title>Sign Up!</title>
         <link href="CSS/global.css" rel="stylesheet">
         <link href="CSS/SignUp.css" rel="stylesheet">
+        <link href="CSS/newcss.css" rel="stylesheet">
         <!--        <link href="CSS/bootstrap.css" rel="stylesheet">-->
         <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
         <script src="Scripts/pictureLoader.js" type="text/javascript"></script>
@@ -51,7 +52,68 @@
                                     </center>
 
                                     <div id="agenda-conteiner"  >
-                                        <h1>Estoy en la agenda</h1>
+                                        <center>
+                                        <table style="background-color: white;" > 
+                                            <br>
+                                            <br>
+                                            <tr>
+                                                <td><strong>/////////////////</strong></td>
+                                                <td><strong>Lunes</strong></td>
+                                                <td><strong>Martes</strong></td>
+                                                <td><strong>Miercoles</strong></td>
+                                                <td><strong>Jueves</strong></td>
+                                                <td><strong>Viernes</strong></td>
+                                                <td><strong>Sabado</strong></td>
+                                                
+                                            </tr>
+                                            
+                                            <tr><td style="text-align: center">8:00am 9:00am</td> 
+                                               
+                                                <td><button id="8Lu" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('8Lu')"></button></td> 
+                                                <td><button id="8Ma" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('8Ma')"></button></td> 
+                                                <td><button id="8Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green " onclick="setColor('8Mi')"></button></td> 
+                                                <td><button id="8Ju" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('8Ju')"></button></td> 
+                                                <td><button id="8Vi" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('8Vi')"></button></td>  
+                                                <td><button id="8Sa" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('8Sa')"></button></td>  
+                                               
+                                            </tr>
+                                            
+                                               <tr><td style="text-align: center">10:00am 11:00am</td> 
+                                                <td><button id="10Lu" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('10Lu')"></button></td> 
+                                                <td><button id="10Ma" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('10Ma')"></button></td> 
+                                                <td><button id="10Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green "onclick="setColor('10Mi')"></button></td> 
+                                                <td><button id="10Ju" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('10Ju')"></button></td> 
+                                                <td><button id="10Vi" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('10Vi')"></button></td>  
+                                                <td><button id="10Sa" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('10Sa')"></button></td>                                              
+                                            </tr>
+                                            <tr><td style="text-align: center">12:00md 1:00pm</td> 
+                                                <td><button id="12Lu" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('12Lu')"></button></td> 
+                                                <td><button id="12Ma" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('12Ma')"></button></td> 
+                                                <td><button id="12Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green" onclick="setColor('12Mi')"></button></td> 
+                                                <td><button id="12Ju" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('12Ju')"></button></td> 
+                                                <td><button id="12Vi" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('12Vi')"></button></td>  
+                                                <td><button id="12Sa" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('12Sa')"></button></td>                                                  
+                                            </tr>
+                                               <tr><td style="text-align: center">2:00pm 3:00om</td> 
+                                                <td><button id="2Lu" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('2Lu')"></button></td> 
+                                                <td><button id="2Ma" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('2Ma')"></button></td> 
+                                                <td><button id="2Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green " onclick="setColor('2Mi')"></button></td> 
+                                                <td><button id="2Ju" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('2Ju')"></button></td> 
+                                                <td><button id="2Vi" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('2Vi')"></button></td>  
+                                                <td><button id="2Sa" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('2Sa')"></button></td>                                                 
+                                            </tr>
+                                            <tr><td style="text-align: center">4:00pm 5:00pm</td> 
+                                                <td><button id="4Lu" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('4Lu')"></button></td> 
+                                                <td><button id="4Ma" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('4Ma')"></button></td> 
+                                                <td><button id="4Mi" style="width:60px;height:40px; margin-left: 10px; background-color: green " onclick="setColor('4Mi')"></button></td> 
+                                                <td><button id="4Ju" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('4Ju')"></button></td> 
+                                                <td><button id="4Vi" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('4Vi')"></button></td>  
+                                                <td><button id="4Sa" style="width:60px;height:40px; margin: 0px; background-color: green" onclick="setColor('4Sa')"></button></td>                                                
+                                            </tr>
+                                        </table>
+                                            <br>
+                                            <br>
+                                            </center>
                                     </div>
 
                                     <div id="bandeja-conteiner" style="display:none;">
@@ -144,8 +206,7 @@
                                                         <button type="submit"> Enviar </button>
                                                     </div>
                                                 </form>                                          
-                                            </div>
-
+                                            </div>      
 
 
                                         </center>
@@ -191,6 +252,16 @@
             function editAccount() {
                 $("#MenuAccount").hide();
                 $("#editAccount").show();
+            }
+            
+            function setColor(id){
+                var property = document.getElementById(id);
+                
+              if (property.style.backgroundColor === 'green') {
+                  property.style.backgroundColor = 'red';
+              } else {
+                   property.style.backgroundColor = 'green';
+              }
             }
         </script>
     </body>
