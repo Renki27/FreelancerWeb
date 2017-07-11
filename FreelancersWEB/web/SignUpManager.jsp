@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="Classes.CodeGenerator"%>
 <%@page import="Classes.NormalBuilderUser"%>
 <%@page import="Classes.ContractorUserBuilder"%>
@@ -38,6 +39,7 @@
     String description = "";
     String filename = application.getRealPath("/") + "AccountList.bin";
     String accountType = "contractor";
+    String[] jobsList;
 
     Account account = null;
     FileWriterManager writer = new FileWriterManager();
@@ -46,55 +48,89 @@
     NormalBuilderUser normalBuilder = new NormalBuilderUser();
     CodeGenerator codeGenerator = new CodeGenerator();
 
-//    if (request.getParameter("radio-selector").equals("normal")) {
-//        accountType = "normal";
-//    }
-    if (!"".equals(request.getParameter("firstname"))) {
-        firstname = request.getParameter("firstname");
+    if (request.getParameter("radio-selector").equals("normal")) {
+        accountType = "normal";
     }
 
-    if (!"".equals(request.getParameter("lastname"))) {
-        lastname = request.getParameter("lastname");
-    }
+    if (accountType.equals("contractor")) {
+        if (!"".equals(request.getParameter("firstname"))) {
+            firstname = request.getParameter("firstname");
+        }
 
-    if (!"".equals(request.getParameter("emailAddress"))) {
-        emailAddress = request.getParameter("emailAddress");
-    }
+        if (!"".equals(request.getParameter("lastname"))) {
+            lastname = request.getParameter("lastname");
+        }
 
-    if (!"".equals(request.getParameter("password"))) {
-        password = request.getParameter("password");
-    }
+        if (!"".equals(request.getParameter("emailAddress"))) {
+            emailAddress = request.getParameter("emailAddress");
+        }
 
-    if (!"".equals(request.getParameter("image-src"))) {
-        imageURL = request.getParameter("image-src");
-    }
+        if (!"".equals(request.getParameter("password"))) {
+            password = request.getParameter("password");
+        }
 
-    if (!"".equals(request.getParameter("phone"))) {
-        phone = request.getParameter("phone");
-    }
+        if (!"".equals(request.getParameter("image-src"))) {
+            imageURL = request.getParameter("image-src");
+        }
 
-    if (!"".equals(request.getParameter("ced-id"))) {
-        id = request.getParameter("ced-id");
-    }
+        if (!"".equals(request.getParameter("phone"))) {
+            phone = request.getParameter("phone");
+        }
 
-    if (!"".equals(request.getParameter("price"))) {
-        String priceS = request.getParameter("price");
-        priceS = priceS.substring(1);
-        price = Double.parseDouble(priceS);
-    }
+        if (!"".equals(request.getParameter("ced-id"))) {
+            id = request.getParameter("ced-id");
+        }
 
-    if (!"".equals(request.getParameter("description"))) {
-        description = request.getParameter("description");
+        if (!"".equals(request.getParameter("price"))) {
+            String priceS = request.getParameter("price");
+            priceS = priceS.substring(1);
+            price = Double.parseDouble(priceS);
+        }
+
+        if (!"".equals(request.getParameter("description"))) {
+            description = request.getParameter("description");
+        }
+
+        jobsList = request.getParameterValues("sports");
+        if (jobsList != null) {
+            for (int i = 0; i < jobsList.length; i++) {
+                out.println("<b>" + jobsList[i] + "<b>");
+            }
+        }
+
+    } else if (accountType.equals("normal")) {
+        if (!"".equals(request.getParameter("firstname"))) {
+            firstname = request.getParameter("firstname");
+        }
+
+        if (!"".equals(request.getParameter("lastname"))) {
+            lastname = request.getParameter("lastname");
+        }
+
+        if (!"".equals(request.getParameter("emailAddress"))) {
+            emailAddress = request.getParameter("emailAddress");
+        }
+
+        if (!"".equals(request.getParameter("password"))) {
+            password = request.getParameter("password");
+        }
+
+        if (!"".equals(request.getParameter("image-src"))) {
+            imageURL = request.getParameter("image-src");
+        }
     }
 
     String verificationCode = codeGenerator.generateRandomChars();
-    if (accountType.equals("contractor")) {
+
+    if (accountType.equals(
+            "contractor")) {
         directorUser.setUserBuilderC(contractorBuilder);
         directorUser.createContratistUser(firstname, lastname, emailAddress, password, imageURL, id, "none", "none", "none",
-        phone, description, price);
+                phone, description, price);
         account = new Account(directorUser.getContractor(), false, verificationCode, "CONTRACTOR");
         System.out.println(account.toString());
-    } else if (accountType.equals("normal")) {
+    } else if (accountType.equals(
+            "normal")) {
         directorUser.setUserBuilder(normalBuilder);
         directorUser.createNormalUser(firstname, lastname, emailAddress, password, imageURL);
         account = new Account(directorUser.getNormalUser(), false, verificationCode, "NORMAL");
@@ -128,6 +164,7 @@
         throw new RuntimeException(e);
     }
 
-    response.sendRedirect("Login.jsp");
+    response.sendRedirect(
+            "Login.jsp");
 %>
 

@@ -33,18 +33,17 @@
                             </div>
 
                             <div id="form-container">
-                                <div class="account-type-selector">
-                                    <div id="radio1" class="grid-50">
-                                        <input name="radio-selector" onclick="accountTypeSelector()"type="radio" id="contractor-radio" value="contractor" checked />
-                                        <label class="grid-100" for="contractor-radio"><span></span>Contractor Account</label>
-                                    </div>
-                                    <div id="radio2" class="grid-50">
-                                        <input  name="radio-selector" onclick="accountTypeSelector()" type ="radio" id="normal-radio" value="normal" />
-                                        <label class="grid-100" for="normal-radio"><span></span>Normal User Account</label>
-                                    </div>                               
-                                </div>
-
                                 <form action="SignUpManager.jsp" method="post" onsubmit="" id="account-creation" novalidate="novalidate">
+                                    <div class="account-type-selector">
+                                        <div id="radio1" class="grid-50">
+                                            <input name="radio-selector" onclick="accountTypeSelector()"type="radio" id="contractor-radio" value="contractor" checked />
+                                            <label class="grid-100" for="contractor-radio"><span></span>Contractor Account</label>
+                                        </div>
+                                        <div id="radio2" class="grid-50">
+                                            <input  name="radio-selector" onclick="accountTypeSelector()" type ="radio" id="normal-radio" value="normal" />
+                                            <label class="grid-100" for="normal-radio"><span></span>Normal User Account</label>
+                                        </div>                               
+                                    </div>
                                     <fieldset class="first"> 
                                         <div class="control-group">
                                             <div class="grid-50">
@@ -110,29 +109,29 @@
                                             <div id="jobs-checkbox-container"class="checkbox-input-container grid-50" >
                                                 <p>Select your work Area(s):</p>
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox"  value="plumbing" id="pb"/>
+                                                    <input class="job-checkbox" type="checkbox"  value="plumbing" id="pb" name="jobs"/>
                                                     <label for="pb"> <span></span>Plumbing</label>
                                                 </div>
 
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox"  value="various-reparations" id="vr"/>
+                                                    <input class="job-checkbox" type="checkbox"  value="various-reparations" id="vr" name="jobs"/>
                                                     <label for="vr"> <span></span>Various Reparations</label>
                                                 </div>
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox" value="removals" id="rm"/>
+                                                    <input class="job-checkbox" type="checkbox" value="removals" id="rm" name="jobs"/>
                                                     <label for="rm"> <span></span>Removals</label>
                                                 </div>
 
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox" value="electrical-works" id="ew"/>
+                                                    <input class="job-checkbox" type="checkbox" value="electrical-works" id="ew" name="jobs"/>
                                                     <label for="ew"> <span></span>Electrical Works</label>
                                                 </div>
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox" value="cleaning" id="cn"/>
+                                                    <input class="job-checkbox" type="checkbox" value="cleaning" id="cn" name="jobs"/>
                                                     <label for="cn"> <span></span>Cleaning</label>
                                                 </div>                  
                                                 <div class="checkbox-inner-div">
-                                                    <input class="job-checkbox" type="checkbox" value="errands" id="er"/>
+                                                    <input class="job-checkbox" type="checkbox" value="errands" id="er" name="jobs"/>
                                                     <label for="er"> <span></span>Errands</label>
                                                 </div>
 
