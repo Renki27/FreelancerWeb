@@ -7,10 +7,11 @@ import java.io.ObjectInputStream;
 public class FileReaderManager {
 
     private ObjectInputStream reader;
+    private FileInputStream stream;
 
     public boolean openFile(String filename) {
         try {
-            reader = new ObjectInputStream(new FileInputStream(filename));
+            reader = new ObjectInputStream(stream = new FileInputStream(filename));
             return true;
         } catch (IOException ex) {
             System.err.println("Error loading file");
@@ -42,5 +43,8 @@ public class FileReaderManager {
             System.err.println(ex);
         }
     }
+
+  
+    
 
 }
