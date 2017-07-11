@@ -21,7 +21,9 @@
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
+
         //  ArrayList<Account> accountList = (ArrayList) session.getAttribute("listaCuentas");
+
 
         ArrayList<Account> accountList = new ArrayList();
         String filename = application.getRealPath("/") + "AccountList.bin";
@@ -32,13 +34,16 @@
             while (acount != null) {
                 accountList.add(acount);
 
+
                 //               System.out.println(acount);
+
 
                 acount = reader.readFile();
 
             }
         }
         reader.closeFile();
+
 
 
         //   System.out.println("hola");
@@ -59,6 +64,7 @@
             request.getSession().setAttribute("account", validatingAccount);
             request.getSession().setAttribute("accountList", accountList);
 
+
         String accountType = validatingAccount.getAccountType();
 
         //  System.out.println("valido esto " + validatingAccount.getActivated());
@@ -73,6 +79,9 @@
             }
 
 
+            response.sendRedirect("LoginExitosoContractor.jsp");
+
+
         } else {
 
             if (validatingAccount.getUser().getPass().equals(password) && !validatingAccount.getActivated()) {
@@ -81,7 +90,11 @@
                 response.sendRedirect("VerificacionCuenta.jsp");
             } else {
 
+
                 response.sendRedirect("Login.jsp?error=Correo o Contraseña incorrectas");
+
+
+                response.sendRedirect("Login.jsp?error=Correo o ContraseÃ±a incorrectas");
 
             }
             }
