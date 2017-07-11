@@ -5,6 +5,8 @@
  */
 package Classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Erik
@@ -18,6 +20,7 @@ public class ContractorUser extends User {
     private String phoneNumber;
     private String description;
     private double pricePerHour;
+    private ArrayList <Request> requestList;
 
     public ContractorUser() {
     }
@@ -31,6 +34,18 @@ public class ContractorUser extends User {
         this.phoneNumber = phoneNumber;
         this.description = description;
         this.pricePerHour = pricePerHour;
+    }
+
+    public ArrayList<Request> getRequestList() {
+        return requestList;
+    }
+
+    public void setRequestList(ArrayList<Request> requestList) {
+        this.requestList = requestList;
+    }
+
+    public void addRequest(Request request){
+        requestList.add(request);
     }
 
     public String getId() {

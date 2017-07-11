@@ -128,7 +128,6 @@
         throw new RuntimeException(e);
     }
 
-    response.sendRedirect(
-            "Login.jsp");
+    response.sendRedirect("Login.jsp");
 %>
 

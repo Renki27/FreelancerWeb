@@ -35,8 +35,8 @@
     String mensaje2 = pregunta1 + " " + pregunta2 + " " + pregunta3 + " " + pregunta4 + " " + pregunta5;
 
     ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
-               String filename = application.getRealPath("/") + "AccountList.bin";
-                FileWriterManager writer = new FileWriterManager();
+    String filename = application.getRealPath("/") + "AccountList.bin";
+    FileWriterManager writer = new FileWriterManager();
     for (int i = 0; i < listaCuentas.size(); i++) {
         if (listaCuentas.get(i).getUser().getEmail().equals(email)) {
 
@@ -79,7 +79,7 @@
 
             }
             
-                                    if (writer.loadFileReplace(filename)) {
+           if (writer.loadFileReplace(filename)) {
             for (int g = 0; g < listaCuentas.size(); g++) {
                 writer.writeFile(listaCuentas.get(g));
             }
@@ -90,7 +90,7 @@
         }
     }
 
-    response.sendRedirect("Login.jsp");
+    response.sendRedirect("LoginExitosoContractor.jsp");
 %>
 
 
