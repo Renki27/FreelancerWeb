@@ -37,10 +37,13 @@
 
     DirectorUser directorUser = new DirectorUser();
     ContractorUserBuilder contractorBuilder = new ContractorUserBuilder();
-//    
+    
+    
+//  
+    ArrayList <String> array = new ArrayList<String>();
     directorUser.setUserBuilderC(contractorBuilder);
     directorUser.createContratistUser(firstname, lastname, emailAddress, password, imageURL, id, "none", "none", "none",
-            phone, description, price);
+            phone, description, price,array);
     account2 = new Account(directorUser.getContractor(), true, "1234", "CONTRACTOR");
 
     String filename = application.getRealPath("/") + "AccountList.bin";

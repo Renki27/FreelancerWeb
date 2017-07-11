@@ -8,10 +8,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+       <title>ContractorList</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Contractor List</h1>
+        <OL>
+            <LI> This is step one.
+            <LI> This is step two.
+            <LI> This is step three.
+        </OL>
     </body>
 </html>
