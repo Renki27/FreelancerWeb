@@ -35,18 +35,12 @@ public abstract class BuilderUsersC {
 
     public abstract void buildId(String id);
 
-    public abstract void buildlocation(String location);
-
-    public abstract void buildActivitys(String act);
-
-    public abstract void buildDays(String days);
-
     public abstract void buildPhone(String phone);
 
     public abstract void buildDescription(String des);
 
     public abstract void buildPrice(double price);
 
-    public abstract void buildJobsList(ArrayList<String> jobList);
+    public abstract void buildJobsList(ArrayList<String> jobsList);
 
 }

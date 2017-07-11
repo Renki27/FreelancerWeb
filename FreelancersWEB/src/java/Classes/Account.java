@@ -27,6 +27,11 @@ public class Account implements Serializable {
         this.activated = activated;
         this.code = code;
         this.pregunta = pregunta;
+        this.accountType = accountType;
+    }
+
+    public boolean isActivated() {
+        return activated;
     }
 
     public Preguntas getPregunta() {
@@ -36,8 +41,6 @@ public class Account implements Serializable {
     public void setPregunta(Preguntas pregunta) {
         this.pregunta = pregunta;
     }
- 
-    
 
     public String getCode() {
         return code;

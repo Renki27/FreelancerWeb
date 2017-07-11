@@ -3,11 +3,42 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/LoginExitosoContractor.jsp</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/ContractorUser.java</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/newcss.css</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/Solicitud.java</file>
-            <file>file:/C:/Users/aleli/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/global.css</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/NormalUser.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Scripts/inputFormatter.js</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/NormalBuilderUser.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/BuilderUsersC.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/cantLogin.css</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Scripts/validateSignupForm.js</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Scripts/UserVerification.js</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CantLogin.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/ContractorUserBuilder.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/FileWriterManager.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CambiarVerificada.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/LoginExitosoContractor.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Login.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Scripts/validatePass.js</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Scripts/pictureLoader.js</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/SignUp.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Scripts/jobsCheckboxCounter.js</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/index.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/VerificacionCuenta.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/ValidarLogin.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/ContractorUser.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/CSS/SignUp.css</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/LoginExitoso.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/DirectorUser.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/SecurityQuestions.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/footer.html</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Scripts/accountTypeSelector.js</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/BuilderUsers.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/header.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/Account.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/FileReaderManager.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/SignUpManager.jsp</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/web/Scripts/validateEmail.js</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/CodeGenerator.java</file>
+            <file>file:/C:/Users/EJRH2/Documents/GitHub/FreelancerWeb/FreelancersWEB/src/java/Classes/User.java</file>
         </group>
     </open-files>
 </project-private>

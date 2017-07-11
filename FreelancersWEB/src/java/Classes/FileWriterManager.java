@@ -35,10 +35,7 @@ public class FileWriterManager {
     public void writeFile(Account account) {
         try {
             writer.writeObject(account);
-        } catch (IOException ex) {
-            System.err.println("Error writing file");
-            System.err.println(ex);
-        } catch (NullPointerException ex) {
+        } catch (IOException | NullPointerException ex) {
             System.err.println("Error writing file");
             System.err.println(ex);
         }

@@ -46,23 +46,8 @@ public class ContractorUserBuilder extends BuilderUsersC {
     }
 
     @Override
-    public void buildlocation(String location) {
-        user.setLocation(location);
-    }
-
-    @Override
-    public void buildActivitys(String act) {
-        user.setActivitys(act);
-    }
-
-    @Override
-    public void buildDays(String days) {
-        user.setDaysAndHours(days);
-    }
-
-    @Override
     public void buildPhone(String phone) {
-        user.setPhoneNumber(phone);
+        user.setPhone(phone);
     }
 
     @Override
@@ -72,12 +57,12 @@ public class ContractorUserBuilder extends BuilderUsersC {
 
     @Override
     public void buildPrice(double price) {
-        user.setPricePerHour(price);
+        user.setPrice(price);
     }
 
     @Override
-    public void buildJobsList(ArrayList<String> jobList) {
-        user.setJobList(jobList);
+    public void buildJobsList(ArrayList<String> jobsList) {
+        user.setJobsList(jobsList);
     }
 
 }

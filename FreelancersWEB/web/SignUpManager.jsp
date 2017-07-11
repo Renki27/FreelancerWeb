@@ -21,8 +21,7 @@
 <%-- validación para obtener el nick de la pagina de registro y asignarlo al bean--%>
 
 
-<%
-    Properties props = new Properties();
+<%  Properties props = new Properties();
     props.put("mail.smtp.auth", "true");
     props.put("mail.smtp.starttls.enable", "true");
     props.put("mail.smtp.host", "smtp.gmail.com");
@@ -83,7 +82,7 @@
 
         if (!"".equals(request.getParameter("price"))) {
             String priceS = request.getParameter("price");
-            priceS = priceS.substring(1);
+            priceS = priceS.replaceAll("[^\\d]", "");
             price = Double.parseDouble(priceS);
         }
 
@@ -107,7 +106,6 @@
         if (request.getParameter("errands") != null) {
             jobsList.add(request.getParameter("errands"));
         }
-
     } else if (accountType.equals("normal")) {
         if (!"".equals(request.getParameter("firstname"))) {
             firstname = request.getParameter("firstname");
@@ -134,7 +132,7 @@
 
     if (accountType.equals("contractor")) {
         directorUser.setUserBuilderC(contractorBuilder);
-        directorUser.createContratistUser(firstname, lastname, emailAddress, password, imageURL, id, "none", "none", "none",
+        directorUser.createContratistUser(firstname, lastname, emailAddress, password, imageURL, id,
                 phone, description, price, jobsList);
         account = new Account(directorUser.getContractor(), false, verificationCode, "CONTRACTOR");
         System.out.println(account.toString());
@@ -150,8 +148,7 @@
         writer.closeFile();
     }
 
-    Session conection = Session.getInstance(props,
-            new javax.mail.Authenticator() {
+    Session conection = Session.getInstance(props, new javax.mail.Authenticator() {
         protected PasswordAuthentication getPasswordAuthentication() {
             return new PasswordAuthentication("grupo4lab7@gmail.com", "laboratorio7.");
         }
@@ -172,7 +169,6 @@
         throw new RuntimeException(e);
     }
 
-    response.sendRedirect(
-            "Login.jsp");
+    response.sendRedirect("Login.jsp");
 %>
 

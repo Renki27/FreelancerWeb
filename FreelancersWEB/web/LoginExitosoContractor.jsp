@@ -31,7 +31,7 @@
         Account cuenta = (Account) session.getAttribute("account");
         ContractorUser contratista = (ContractorUser) cuenta.getUser();
         String descripcion = contratista.getDescription();
-        double price = contratista.getPricePerHour();
+        double price = contratista.getPrice();
 
     %>
     <body class="static-bg">

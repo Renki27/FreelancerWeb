@@ -27,7 +27,7 @@ public class DirectorUser {
     }
 
     public void createContratistUser(String name, String lastName, String email, String pass, String image,
-            String id, String location, String activity, String days, String phone, String description, double price, ArrayList<String> jobList ) {
+            String id, String phone, String description, double price, ArrayList<String> jobsList) {
 
         buildContractor.create();
         buildContractor.buildName(name);
@@ -36,13 +36,10 @@ public class DirectorUser {
         buildContractor.buildPass(pass);
         buildContractor.buildImage(image);
         buildContractor.buildId(id);
-        buildContractor.buildlocation(location);
-        buildContractor.buildActivitys(activity);
-        buildContractor.buildDays(days);
         buildContractor.buildPhone(phone);
         buildContractor.buildDescription(description);
         buildContractor.buildPrice(price);
-        buildContractor.buildJobsList(jobList);
+        buildContractor.buildJobsList(jobsList);
 
     }
 

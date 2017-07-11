@@ -15,27 +15,74 @@ public class ContractorUser extends User {
 
     private String id;
     private String location;
-    private String activitys;
-    private String daysAndHours;
-    private String phoneNumber;
+    private String activity;
+    private String phone;
     private String description;
-    private double pricePerHour;
+    private double price;
     private ArrayList<Request> requestList;
-    private ArrayList<String> jobList;
+    private ArrayList<String> jobsList;
 
     public ContractorUser() {
     }
 
-    public ContractorUser(String id, String location, String activitys, String daysAndHours, String phoneNumber, String description, double pricePerHour, String name, String lastName, String email, String pass, String image, ArrayList<String> jobList) {
+    public ContractorUser(String name, String lastName, String email, String pass, String image,
+            String id, String location, String activity, String phone, String description, double price, ArrayList<String> jobsList) {
         super(name, lastName, email, pass, image);
         this.id = id;
         this.location = location;
-        this.activitys = activitys;
-        this.daysAndHours = daysAndHours;
-        this.phoneNumber = phoneNumber;
+        this.activity = activity;
+        this.phone = phone;
         this.description = description;
-        this.pricePerHour = pricePerHour;
-        this.jobList = jobList;
+        this.price = price;
+        this.jobsList = jobsList;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getActivity() {
+        return activity;
+    }
+
+    public void setActivity(String activity) {
+        this.activity = activity;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public ArrayList<Request> getRequestList() {
@@ -46,78 +93,17 @@ public class ContractorUser extends User {
         this.requestList = requestList;
     }
 
-    public void addRequest(Request request) {
-        requestList.add(request);
+    public ArrayList<String> getJobsList() {
+        return jobsList;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public String getActivitys() {
-        return activitys;
-    }
-
-    public String getDaysAndHours() {
-        return daysAndHours;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public double getPricePerHour() {
-        return pricePerHour;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public void setActivitys(String activitys) {
-        this.activitys = activitys;
-    }
-
-    public void setDaysAndHours(String daysAndHours) {
-        this.daysAndHours = daysAndHours;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setPricePerHour(double pricePerHour) {
-        this.pricePerHour = pricePerHour;
-    }
-
-    public ArrayList<String> getJobList() {
-        return jobList;
-    }
-
-    public void setJobList(ArrayList<String> jobList) {
-        this.jobList = jobList;
+    public void setJobsList(ArrayList<String> jobsList) {
+        this.jobsList = jobsList;
     }
 
     @Override
     public String toString() {
-        return "Contractor User " + "\nUser: " + super.getName() + "\nApellido: " + super.getLastName() + "\nEmail: " + super.getEmail() + "\nPass: " + super.getPass()
-                + "\nImage: " + super.getImage() + "\nid = " + id + ",\nlocation = " + location + ",\nactivitys = " + activitys + ",\ndaysAndHours = " + daysAndHours + ",\nphoneNumber = " + phoneNumber + ",\ndescription = " + description + ",\npricePerHour = " + pricePerHour + '}';
+        return "ContractorUser{" + "id=" + id + ", location=" + location + ", activity=" + activity + ", phone=" + phone + ", description=" + description + ", price=" + price + ", requestList=" + requestList + ", jobsList=" + jobsList + '}';
     }
 
 }

@@ -139,7 +139,7 @@
                                     </fieldset>
 
                                     <div id="signup-submit">
-                                        <button id="signnup-button" type="submit" class="btn-primary btn-large btn-block"  onclick="submitForm()">Sign Up</button>
+                                        <button id="signnup-button" type="submit" class="btn-primary btn-large btn-block">Sign Up</button>
                                     </div>
                                 </form>
 

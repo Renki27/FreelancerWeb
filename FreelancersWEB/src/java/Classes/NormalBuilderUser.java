@@ -5,10 +5,7 @@
  */
 package Classes;
 
-/**
- *
- * @author Erik
- */
+
 public class NormalBuilderUser extends BuilderUsers {
 
     @Override
