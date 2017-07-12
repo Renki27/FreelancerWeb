@@ -33,8 +33,9 @@
     String emailAddress = account.getUser().getEmail();
     String password = account.getUser().getPass();
     String id = contratista.getId();
-    String phone = contratista.getPhoneNumber();
-
+    String phone = contratista.getPhone();
+    ArrayList <String> jobsList = null;
+    
     DirectorUser directorUser = new DirectorUser();
     ContractorUserBuilder contractorBuilder = new ContractorUserBuilder();
     
@@ -42,8 +43,8 @@
 //  
     ArrayList <String> array = new ArrayList<String>();
     directorUser.setUserBuilderC(contractorBuilder);
-    directorUser.createContratistUser(firstname, lastname, emailAddress, password, imageURL, id, "none", "none", "none",
-            phone, description, price,array);
+        directorUser.createContratistUser(firstname, lastname, emailAddress, password, imageURL, id,
+                phone, description, price, jobsList);
     account2 = new Account(directorUser.getContractor(), true, "1234", "CONTRACTOR");
 
     String filename = application.getRealPath("/") + "AccountList.bin";
