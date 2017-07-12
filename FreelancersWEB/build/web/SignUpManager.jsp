@@ -1,4 +1,7 @@
- n<%@page import="java.util.ArrayList"%>
+
+<!DOCTYPE.html>
+
+<%@page import="java.util.ArrayList"%>
 <%@page import="Classes.CodeGenerator"%>
 <%@page import="Classes.NormalBuilderUser"%>
 <%@page import="Classes.ContractorUserBuilder"%>
@@ -17,8 +20,7 @@
 <%@page import="javax.mail.Transport"%>
 <%@page import="javax.mail.internet.InternetAddress"%>
 <%@page import="javax.mail.internet.MimeMessage"%>
-
-<%-- validación para obtener el nick de la pagina de registro y asignarlo al bean--%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 
 
 <%  Properties props = new Properties();

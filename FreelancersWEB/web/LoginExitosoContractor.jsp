@@ -6,7 +6,7 @@
 
 <%@page import="Classes.ContractorUser"%>
 <%@page import="Classes.Account"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,7 +49,7 @@
                                             <button id="Cuenta" onclick="menuSelector('Cuenta')" value="Cuenta" class="button" >Cuenta</button>
                                             <form action="CerrarSesion.jsp">
                                                 <br>
-                                            <button id="Cerrar" value="CerrarSesion" class="button">CerrarSesion</button>
+                                                <button id="Cerrar" value="CerrarSesion" class="button">CerrarSesion</button>
                                             </form>                                            
                                         </div>
                                         <h1 style="color: gray; margin-top: -2px">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h1>
@@ -162,7 +162,7 @@
                                                 <button onclick="changePass()">Cambiar contraseña</button>
                                                 <button onclick="editAccount()">Editar Cuenta</button>  
                                             </div>
-<br>
+                                            <br>
 
                                             <div id="changePassword" style="display: none">
                                                 <form action="changePassword.jsp" method="post">                                           
@@ -241,11 +241,11 @@
                                                         <center>
                                                             <h4 style="color: white">Nota: Para que el cambio se haga efectivo, debera cerrar sesion</h4>
                                                         </center>
-                                                        <button type="submit"> Enviar </button>
-                                                        
+                                                        <button type="submit"  class="btn-primary btn-large btn-block">Send</button>
+
                                                     </div>
                                                 </form>
-                                                    <br>
+                                                <br>
                                             </div>      
 
 

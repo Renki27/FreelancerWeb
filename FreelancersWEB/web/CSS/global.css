@@ -18,6 +18,18 @@ and open the template in the editor.
     /*    font-weight: normal;
         font-style: normal;*/
 } 
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
 body {
     background-color: black;
     min-width: 320px
@@ -30,6 +42,14 @@ body, html {
 body .logo {
     margin-top: 55px;
     margin-bottom: 40px;
+}
+
+.central-button {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button {

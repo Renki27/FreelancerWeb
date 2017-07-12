@@ -1,5 +1,5 @@
 <%@page import="java.beans.Beans"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 
 <!DOCTYPE html>
 <html>
@@ -33,10 +33,10 @@
                             </div>
 
                             <div id="form-container">
-                                <form action="SignUpManager.jsp" method="post" onsubmit="" id="account-creation" novalidate="novalidate">
+                                <form action="SignUpManager.jsp" method="post" onload= "return validateFields()" id="account-creation" novalidate="novalidate">
                                     <div class="account-type-selector">
                                         <div id="radio1" class="grid-50">
-                                            <input name="radio-selector" onclick="accountTypeSelector()"type="radio" id="contractor-radio" value="contractor" checked />
+                                            <input name="radio-selector" onclick="accountTypeSelector()" type="radio" id="contractor-radio" value="contractor" checked />
                                             <label class="grid-100" for="contractor-radio"><span></span>Contractor Account</label>
                                         </div>
                                         <div id="radio2" class="grid-50">
@@ -48,46 +48,45 @@
                                         <div class="control-group">
                                             <div class="grid-50">
                                                 <input type="text" id="firstname" name="firstname" value="" 
-                                                       autocapitalize="on" autocomplete="off" autocorrect="off" 
                                                        maxlength="25" placeholder="First Name" required="required" 
-                                                       spellcheck="off"/> 
+                                                       /> 
                                             </div>
                                             <div class="grid-50">
                                                 <input type="text" id="lastname" name="lastname" value="" 
-                                                       autocapitalize="on" autocomplete="off" autocorrect="off" 
+                                                       autocomplete="off" 
                                                        maxlength="25" placeholder="Last Name" required="required" 
-                                                       spellcheck="off"/> 
+                                                       /> 
                                             </div>
 
                                         </div>
 
                                         <div id="phone-container" class="control-group number-fields-inline grid-33">
                                             <input class="grid-100 input-phone" type="text"  id="phone" name="phone" value="" autocomplete="off" maxlength="10" placeholder="Phone Number"
-                                                   required="required" spellcheck="off"
+                                                   required="required"
                                                    />
                                         </div>
                                         <div id="ced-id-container" class="control-group number-fields-inline grid-33">
                                             <input class="grid-100" type="text"  id="ced-id" name="ced-id" value="" autocomplete="off" maxlength="50" placeholder="ID Number"
-                                                   required="required" spellcheck="off"
+                                                   required="required" 
                                                    />
                                         </div>
                                         <div id="price-container" class="control-group grid-33"> 
                                             <input class="grid-100 input-price" type="text"  id="price-per-hour" name="price" value=""  autocomplete="off" maxlength="15" placeholder="Price per Hour"
-                                                   required="required" spellcheck="off"
+                                                   required="required" 
                                                    />
                                         </div>
 
                                     </fieldset>
                                     <fieldset>
                                         <div class="control-group row-emailAdress">
-                                            <input type="email" id="emailAddress" name="emailAddress" value="" placeholder="Email" maxlength="320" autocomplete="on" class="grid-100" required="required" spellcheck="false"/>
+                                            <input type="email" id="emailAddress" name="emailAddress" value="" placeholder="Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false"/>
                                         </div>
                                         <div class="control-group row-emailAdress">
                                             <input type="email" id="emailAddressConfirmation" name="emailAddressConfirmation" value="" placeholder="Confirm Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false"  onkeyup="checkEmail(); return false;"/>
                                             <span id="emailAddressConfirmation-error-inline" class="help-block"></span>
                                         </div>
                                         <div class="control-group row-password">
-                                            <input type="password" id="password" name="password" value="" maxlength="16" placeholder="Password" class="password-input" autocapitalize="off" autocomplete="off" required="required" spellcheck="false"/>
+                                            <input type="password" id="password" name="password" value="" maxlength="16" placeholder="Password" class="password-input" autocomplete="off" required="required" spellcheck="false"/>
                                         </div>
                                         <div class="control-group row-password">
                                             <input type="password" id="rePassword" name="rePassword" value="" maxlength="16" placeholder="Confirm Password" class="password-input"  required="required" onkeyup="checkPass(); return false;"/>
@@ -106,7 +105,7 @@
                                                 <label id="load-image-label" class="grid-100" for="upload-photo">Load Image</label>
                                                 <input onclick="imagePicker()" id="upload-photo" name="image-src" class="file-upload grid-100" type="file" accept="image/*" required="required"/>
                                             </div>
-                                            <div id="jobs-checkbox-container"class="checkbox-input-container grid-50" >
+                                            <div id="jobs-checkbox-container" class="checkbox-input-container grid-50" >
                                                 <p>Select your work Area(s):</p>
                                                 <div class="checkbox-inner-div">
                                                     <input class="job-checkbox" type="checkbox"  value="plumbing" id="pb" name="plumbing"/>
@@ -139,7 +138,7 @@
                                     </fieldset>
 
                                     <div id="signup-submit">
-                                        <button id="signnup-button" type="submit" class="btn-primary btn-large btn-block">Sign Up</button>
+                                        <button id="submit-button" type="submit" class="btn-primary btn-large btn-block">Sign Up</button>
                                     </div>
                                 </form>
 

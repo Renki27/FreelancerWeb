@@ -8,6 +8,10 @@ and open the template in the editor.
     Author     : ZERO
 */
 
+#h1-title {
+    margin-top: 30px;
+    color: white;
+}
 
 body .login {
     width: 100%;
@@ -15,10 +19,6 @@ body .login {
     margin-left: auto;
     margin-right: auto;
 }
-
-
-
-
 
 /*Fondo sobre el video para desactivar el click */
 #img-filterBG {

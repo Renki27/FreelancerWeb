@@ -14,7 +14,7 @@
 <%@page import="java.io.ObjectInputStream"%>
 <%@page import="Classes.FileReaderManager"%>
 <%@page import="java.util.ArrayList"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +22,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="CSS/global.css" rel="stylesheet">
         <link href="CSS/login.css" rel="stylesheet">
-
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script><!--URL de JQuery -->
 
     </head>
@@ -36,7 +35,7 @@
            
             <div class="login-box">
                 <center>
-                <h1 style="color: white; font-family: Times New Roman; text-decoration: underline;">Account Login</h1>
+                    <h1 id="h1-title">Account Login</h1>
                 </center>
                 <div class="input" id="login-wrapper">
                     <div class="login" >
@@ -48,14 +47,14 @@
                                 <div class="login-group">
                                     <label id="email-label" class="control-label" for="email">Email</label>
                                     <div class="controls">
-                                        <input class="input-block input-large" id="email-input" type="email" name="email" placeholder="Email" autocorrect="off" spellcheck="false" />
+                                        <input class="input-block input-large" id="email-input" type="email" name="email" placeholder="Email" spellcheck="false" />
                                     </div>
                                 </div>
 
                                 <div class="login-group">
                                     <label id="password-label" class="control-label" for="password">Password</label>
                                     <div class="controls">
-                                        <input class="input-block input-large" id="password-input" type="password" name="password" autocomplete="off" placeholder="Password" autocorrect="off" spellcheck="false" />
+                                        <input class="input-block input-large" id="password-input" type="password" name="password" autocomplete="off" placeholder="Password" spellcheck="false" />
                                     </div>
                                 </div>
 

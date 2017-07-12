@@ -33,17 +33,16 @@
                                     <h3 style="text-align: center; color: white; padding-top: 50px;">Ingrese el correo con el cual se registro</h3>
                                     <div class="grid-50" style="width: 100%; margin-top: 20px; display: flex; align-items: center; justify-content: center; padding-bottom: 30px;">
                                         <input type="text" id="email" name="email" value="" 
-                                               autocapitalize="on" autocomplete="off" autocorrect="off" 
                                                maxlength="25" required="required" 
-                                               spellcheck="off"> 
+                                               > 
                                     </div>
 
                                     <center>
-                                        <img src="Images/recordarContraseña.png" style="width: 100px; height: 100px;"/> 
+                                        <img src="Images/recordarContraseña.png" alt="Image not found" style="width: 100px; height: 100px;"/> 
                                     </center>
 
                                     <div id="signup-submit" >                                   
-                                        <button type="submit"class="boton"> <img class="imagen "src="Images/Enviar.png" ></button>
+                                        <button type="submit"  class="btn-primary btn-large btn-block">Send</button>
                                     </div>
                                 </form>                             
                             </div>

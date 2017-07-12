@@ -11,6 +11,7 @@
 <%@page import="Classes.NormalUser"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Account"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 <%
     Account account2 = null;
     Account account = (Account) session.getAttribute("account");
