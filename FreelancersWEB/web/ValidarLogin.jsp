@@ -18,7 +18,6 @@
 
 
 <%
-
     String email = request.getParameter("email");
     String password = request.getParameter("password");
 
@@ -28,27 +27,29 @@
     FileReaderManager reader = new FileReaderManager();
 
     if (reader.openFile(filename)) {
-        Account account = reader.readFile();
-        while (true) {
-            if (account != null) {
-                accountList.add(account);
-                account = reader.readFile();
-            } else {
-                break;
+            Account account = reader.readFile();
+            while (true) {
+                if (account != null) {
+                    accountList.add(account);
+                    account = reader.readFile();
+                } else {
+                    break;
+                }
             }
         }
-    }
-    reader.closeFile();
+        reader.closeFile();
+  
+
 
     //   System.out.println("hola");
-    request.getSession().setAttribute("listaCuentas", accountList);
+    // request.getSession().setAttribute("accountList", accountList);
     Account validatingAccount = null;
     for (int idx = 0; idx < accountList.size(); idx++) {
         if (accountList.get(idx).getUser().getEmail().equals(email)) {
             validatingAccount = accountList.get(idx);
         }
     }
-
+    System.out.println("mi cuenta es " + validatingAccount.getUser().getName());
     if (validatingAccount == null) {
         response.sendRedirect("Login.jsp?error=Correo o Contraseña incorrectas");
     } else {
@@ -62,24 +63,15 @@
                 response.sendRedirect("LoginExitosoContractor.jsp");
             } else if (accountType.equals("NORMAL")) {
                 response.sendRedirect("NormalUserProfile.jsp");
-            } else {
-                //error page
             }
-
-           
 
         } else {
 
             if (validatingAccount.getUser().getPass().equals(password) && !validatingAccount.getActivated()) {
                 request.getSession().setAttribute("account", validatingAccount);
                 request.getSession().setAttribute("accountList", accountList);
+                System.out.println("C mamut");
                 response.sendRedirect("VerificacionCuenta.jsp");
-            } else {
-
-                
-
-                response.sendRedirect("Login.jsp?error=Correo o Contraseña incorrectas");
-
             }
         }
     }

@@ -80,7 +80,7 @@
                                     </fieldset>
                                     <fieldset>
                                         <div class="control-group row-emailAdress">
-                                            <input type="email" id="emailAddress" name="emailAddress" value="" placeholder="Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false"/>
+                                            <input type="email" id="emailAddress" name="emailAddress" value="" placeholder="Email" maxlength="320" autocomplete="on" class="grid-100" required="required" spellcheck="false"/>
                                         </div>
                                         <div class="control-group row-emailAdress">
                                             <input type="email" id="emailAddressConfirmation" name="emailAddressConfirmation" value="" placeholder="Confirm Email" maxlength="320" autocomplete="off" class="grid-100" required="required" spellcheck="false"  onkeyup="checkEmail(); return false;"/>
