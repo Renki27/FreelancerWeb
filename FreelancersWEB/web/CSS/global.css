@@ -30,6 +30,16 @@ h2 {
 h3 {
     font-family: 'Roboto', sans-serif;
 }
+
+
+#errorMessage-text {
+
+    font-family: "BigNoodle"; 
+    color: white;
+    font-size: 100px;
+    text-align: center;
+
+}
 body {
     background-color: black;
     min-width: 320px

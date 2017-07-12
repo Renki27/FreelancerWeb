@@ -14,6 +14,7 @@
         <script src="Scripts/accountTypeSelector.js" type="text/javascript"></script>
         <script src="Scripts/validatePass.js" type="text/javascript"></script>
         <script src="Scripts/validateEmail.js" type="text/javascript"></script>
+        <script src="Scripts/UserVerification.js" type="text/javascript"></script>
         <!--<script src="Scripts/jobsCheckboxCounter.js" type="text/javascript"></script>-->
         <script src="Scripts/validateSignupForm.js" type="text/javascript"></script>
         <script src="js/cleave.min.js" type="text/javascript"></script>
@@ -33,7 +34,7 @@
                             </div>
 
                             <div id="form-container">
-                                <form action="SignUpManager.jsp" method="post" onload= "return validateFields()" id="account-creation" novalidate="novalidate">
+                                <form action="SignUpManager.jsp" method="post" onsubmit="return validateFields()" id="account-creation" novalidate="novalidate">
                                     <div class="account-type-selector">
                                         <div id="radio1" class="grid-50">
                                             <input name="radio-selector" onclick="accountTypeSelector()" type="radio" id="contractor-radio" value="contractor" checked />
