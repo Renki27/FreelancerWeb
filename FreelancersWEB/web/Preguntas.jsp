@@ -23,36 +23,36 @@
             <h3 style=""class="textoPregunta">¿Cual fue el nombre de tu primer mascota?</h3>
             <div class="preguntas">
                 <input type="text" id="pregunta1" name="pregunta1" value="" 
-                       autocapitalize="on" required="required" 
-                       spellcheck="off">
+                        required="required" 
+                       >
             </div>
             <h2 class="linea">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
             <h3 style=""class="textoPregunta">¿Cual es tu artista favorito?</h3>
             <div class="preguntas">
                 <input type="text" id="pregunta2" name="pregunta2" value="" 
-                       autocapitalize="on" required="required" 
-                       spellcheck="off">
+                        required="required" 
+                       >
             </div>
             <h2 class="linea">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
             <h3 style=""class="textoPregunta">¿Cual es su ciudad de nacimiento?</h3>
             <div class="preguntas">
                 <input type="text" id="pregunta3" name="pregunta3" value="" 
-                       autocapitalize="on" required="required" 
-                       spellcheck="off">
+                       required="required" 
+                       >
             </div>
             <h2 class="linea">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
             <h3 style=""class="textoPregunta">¿Cual es tu fruta favorita?</h3>
             <div class="preguntas">
                 <input type="text" id="pregunta4" name="pregunta4" value="" 
-                       autocapitalize="on" required="required" 
-                       spellcheck="off">
+                        required="required" 
+                       >
             </div>
             <h2 class="linea">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
             <h3 style=""class="textoPregunta">¿Cual es tu color favorito?</h3>
             <div class="preguntas">
                 <input type="text" id="pregunta5" name="pregunta5" value="" 
-                       autocapitalize="on" required="required" 
-                       spellcheck="off">
+                        required="required" 
+                       >
             </div>   
             <h2 class="linea">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
             <div id="signup-submit" >                                  

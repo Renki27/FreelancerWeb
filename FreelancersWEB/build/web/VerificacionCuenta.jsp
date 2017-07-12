@@ -16,7 +16,7 @@
         <link href="CSS/SignUp.css" rel="stylesheet">
         <link href="CSS/cantLogin.css" rel="stylesheet">
     </head>
-    <body>
+ 
         <%
             Account cuenta = (Account) session.getAttribute("account");
         //    ArrayList<Account> accountList = (ArrayList) session.getAttribute("accountList");
@@ -37,8 +37,8 @@
                                     <div>
                                         <center>
                                         <input type="text" id="verification-code" name="verificationCode" value="" 
-                                               autocapitalize="on" required="required" 
-                                               spellcheck="off">
+                                                required="required" 
+                                               >
                                         </center>
                                     </div>
                                     <div id="signup-submit" >                       

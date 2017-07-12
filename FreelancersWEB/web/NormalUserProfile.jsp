@@ -5,6 +5,7 @@
 --%>
 
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="Classes.NormalUser"%>
 <%@page import="Classes.ContractorUser"%>
 <%@page import="Classes.Account"%>
@@ -31,6 +32,7 @@
     </head>
     <%
         Account cuenta = (Account) session.getAttribute("account");
+         ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
         NormalUser user = (NormalUser) cuenta.getUser();
     %>
     <body class="static-bg">
@@ -86,15 +88,15 @@
                                                 <h2 style="color: white">__________</h2>
                                                 <div>
                                                     <p style="color: white">Select the hour:</p>
-                                                    <input name="Hour" class="job-checkbox" type="radio"  value="8-9" id="8-9"/>
+                                                    <input name="Hour" class="job-checkbox" type="radio"  value="8:00am - 9:00am" id="8-9"/>
                                                     <label for="8-9"> <span></span>8:00am - 9:00am</label>
-                                                <input name="Hour" class="job-checkbox" type="radio"  value="10-11" id="10-11"/>
+                                                <input name="Hour" class="job-checkbox" type="radio"  value="10:00am - 11:00am" id="10-11"/>
                                                 <label for="10-11"> <span></span>10:00am - 11:00am</label>
-                                                <input name="Hour" class="job-checkbox" type="radio" value="12-1" id="12-1"/>
+                                                <input name="Hour" class="job-checkbox" type="radio" value="12:00md - 1:00pm" id="12-1"/>
                                                 <label for="12-1"> <span></span>12:00md - 1:00pm</label>
-                                                <input name="Hour" class="job-checkbox" type="radio" value="2-3" id="2-3"/>
+                                                <input name="Hour" class="job-checkbox" type="radio" value="2:00pm - 3:00" id="2-3"/>
                                                 <label for="2-3"> <span></span>2:00pm - 3:00pm</label>
-                                                <input name="Hour" class="job-checkbox" type="radio" value="4-5" id="4-5"/>
+                                                <input name="Hour" class="job-checkbox" type="radio" value="4:00pm - 5:00pm" id="4-5"/>
                                                 <label for="4-5"> <span></span>4:00pm - 5:00pm</label> 
 
                                                 <h2 style="color: white">__________</h2>
@@ -111,9 +113,39 @@
                                     </div>
                                    </center>
 
-                                   <div id="VerSolicitudesPendientes-conteiner" style="display:none;">
-                                       <h1>Estoy en ver solicitudes</h1>
-                                   </div>
+                                    <div id="VerSolicitudesPendientes-conteiner" style="display:none;">
+                                        <%for (int idx = 0; idx < cuenta.getUser().getRequestList().size(); idx++) {
+                                        %>
+
+                                        <div style= "background-color: grey; border: solid 3px black; margin-bottom: 20px">
+                                            <div>
+                                            </div>
+                                            <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Solicitante: <%=cuenta.getUser().getRequestList().get(idx).getCustomerName()%><center></center></h3>
+                                            <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descripcion: <%=cuenta.getUser().getRequestList().get(idx).getDescription()%><center></center></h3>
+                                            <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Localizacion: <%=cuenta.getUser().getRequestList().get(idx).getLocation()%><center></center></h3>
+                                           <% if (cuenta.getUser().getRequestList().get(idx).isValue()){ %>
+                                             <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estado de la solicitud: Aceptada<center></center></h3>  
+                                           <% }else{%>
+                                           <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estado de la solicitud: Pendiente<center></center></h3>  
+                                           <%}%>
+                                            <center>
+<!--                                                <form action="HacerSolicitud.jsp">            
+                                                    <input id="ContractorAccount" name="ContractorAccount" value="<%//=listaCuentas.get(idx).getUser().getEmail()%>" style="display: none">
+                                                    <input id="descripcion" name="description" value="<%//=description%>" style="display: none">
+                                                    <input id="date" name="date" value="<%//=date%>" style="display: none">
+                                                    <input id="Hour" name="Hour" value="<%//=hour%>" style="display: none">
+
+                                                    <button type="submit" class="button" style="background-color: lightgray" >Hacer Solicitud</button>
+                                                </form>-->
+                                            </center>
+                                            <br>
+           </div>
+                                              <% }
+                                                  
+
+                                              %>
+                                    </div>
+                                   
                                    <div id="cuenta-conteiner" style="display:none;">
                                        <center>
                                             <div id="MenuAccount">

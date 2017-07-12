@@ -31,6 +31,10 @@ public class User implements Serializable {
         this.pass = pass;
         this.image = image;
     }
+    
+    public void addRequest(Request request){
+       requestList.add(request);
+    }
 
     public ArrayList<Request> getRequestList() {
         return requestList;

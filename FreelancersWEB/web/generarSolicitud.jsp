@@ -29,7 +29,10 @@
          </center>
         <%for (int idx = 0; idx < listaCuentas.size(); idx++) {
               if(listaCuentas.get(idx).getAccountType().equals("CONTRACTOR")){
-                  contratista = (ContractorUser) listaCuentas.get(idx).getUser();
+              contratista = (ContractorUser) listaCuentas.get(idx).getUser();            
+              String description = request.getParameter("description");
+              String date = request.getParameter("date");
+              String hour = request.getParameter("Hour");
                 %>
  
            <div style="margin-bottom: 100px; background-color: grey;margin-left: 400px;margin-right: 400px; border: solid 3px black">
@@ -41,7 +44,11 @@
             <h2 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Precio por Hora: <%=contratista.getPrice()%></h2>
            <center>
                <form action="HacerSolicitud.jsp">            
-               <input id="account" name="newPass" value="<%=listaCuentas.get(idx).getUser().getEmail()%>" style="display: none">
+               <input id="ContractorAccount" name="ContractorAccount" value="<%=listaCuentas.get(idx).getUser().getEmail()%>" style="display: none">
+               <input id="descripcion" name="description" value="<%=description%>" style="display: none">
+               <input id="date" name="date" value="<%=date%>" style="display: none">
+               <input id="Hour" name="Hour" value="<%=hour%>" style="display: none">
+               
                <button type="submit" class="button" style="background-color: lightgray" >Hacer Solicitud</button>
            </form>
            </center>
@@ -51,9 +58,6 @@
             }
 
         %>
-       
-
-
         </div>
 
     

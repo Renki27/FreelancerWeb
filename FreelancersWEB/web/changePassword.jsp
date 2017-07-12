@@ -16,23 +16,23 @@
 Account cuenta = (Account) session.getAttribute("account");
 ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
 String newPass = request.getParameter("newPass");
-String filename = application.getRealPath("/") + "AccountList.bin";
- FileWriterManager writer = new FileWriterManager();
- for (int i = 0; i < listaCuentas.size(); i++) {
- if (listaCuentas.get(i).getUser().getEmail().equals(cuenta.getUser().getEmail()))
-     listaCuentas.get(i).getUser().setPass(newPass);
-     listaCuentas.set(i, listaCuentas.get(i));
-     
-     
-                 if (writer.loadFileReplace(filename)) {
+    String filename = application.getRealPath("/") + "AccountList.bin";
+    FileWriterManager writer = new FileWriterManager();
+    for (int i = 0; i < listaCuentas.size(); i++) {
+        if (listaCuentas.get(i).getUser().getEmail().equals(cuenta.getUser().getEmail())) {
+            listaCuentas.get(i).getUser().setPass(newPass);
+        }
+        listaCuentas.set(i, listaCuentas.get(i));
+
+        if (writer.loadFileReplace(filename)) {
             for (int g = 0; g < listaCuentas.size(); g++) {
                 writer.writeFile(listaCuentas.get(g));
             }
             writer.closeFile();
         }
-     break;
- }
-  response.sendRedirect("LoginExitosoContractor.jsp");
+        break;
+    }
+    response.sendRedirect("LoginExitosoContractor.jsp");
 
 
 

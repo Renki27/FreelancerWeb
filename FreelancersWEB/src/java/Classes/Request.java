@@ -5,11 +5,13 @@
  */
 package Classes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author alelizmu
  */
-public class Request {
+public class Request implements Serializable{
 
     private String customerName;
     private String description;
@@ -73,5 +75,7 @@ public class Request {
     public void setHora(String hora) {
         this.hora = hora;
     }
+    
+    
 
 }

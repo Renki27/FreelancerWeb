@@ -120,7 +120,39 @@
                                     </div>
 
                                     <div id="bandeja-conteiner" style="display:none;">
-                                        <h1>Estoy en la bandeja</h1>
+                                         <%
+                                             if (contratista.getRequestList() != null){
+                                             for (int idx = 0; idx < cuenta.getUser().getRequestList().size(); idx++) {
+                                        %>
+
+                                        <div style= "background-color: grey; border: solid 3px black; margin-bottom: 20px">
+                                            <div>
+                                            </div>
+                                            <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Solicitante: <%=cuenta.getUser().getRequestList().get(idx).getCustomerName()%><center></center></h3>
+                                            <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descripcion: <%=cuenta.getUser().getRequestList().get(idx).getDescription()%><center></center></h3>
+                                            <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Localizacion: <%=cuenta.getUser().getRequestList().get(idx).getLocation()%><center></center></h3>
+                                           <% if (cuenta.getUser().getRequestList().get(idx).isValue()){ %>
+                                             <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estado de la solicitud: Aceptada<center></center></h3>  
+                                           <% }else{%>
+                                           <h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estado de la solicitud: Pendiente<center></center></h3>  
+                                           <%}%>
+                                            <center>
+<!--                                                <form action="HacerSolicitud.jsp">            
+                                                    <input id="ContractorAccount" name="ContractorAccount" value="<%//=listaCuentas.get(idx).getUser().getEmail()%>" style="display: none">
+                                                    <input id="descripcion" name="description" value="<%//=description%>" style="display: none">
+                                                    <input id="date" name="date" value="<%//=date%>" style="display: none">
+                                                    <input id="Hour" name="Hour" value="<%//=hour%>" style="display: none">
+
+                                                    <button type="submit" class="button" style="background-color: lightgray" >Hacer Solicitud</button>
+                                                </form>-->
+                                            </center>
+                                            <br>
+           </div>
+                                              <% }
+                                              } 
+
+                                              %>
+                                    </div>
                                     </div>
 
                                     <div id="cuenta-conteiner" style="display:none;">

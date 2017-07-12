@@ -65,6 +65,10 @@ public class ContractorUser extends User {
     public void setPrice(double price) {
         this.price = price;
     }
+    
+    public void addRequestList(Request request){
+        requestList.add(request);
+    }
 
     public ArrayList<Request> getRequestList() {
         return requestList;
