@@ -19,7 +19,7 @@
 <%@page import="javax.mail.internet.InternetAddress"%>
 <%@page import="javax.mail.internet.MimeMessage"%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 <!DOCTYPE html>
 
 <%

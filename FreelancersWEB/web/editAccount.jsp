@@ -14,7 +14,7 @@
 <%@page import="Classes.User"%>
 <%@page import="Classes.Account"%>
 <%@page import="Classes.FileWriterManager"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 <!DOCTYPE html>
 <%
     Account account2 = null;

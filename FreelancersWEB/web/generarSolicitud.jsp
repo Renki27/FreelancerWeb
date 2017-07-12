@@ -7,7 +7,7 @@
 <%@page import="Classes.ContractorUser"%>
 <%@page import="Classes.Account"%>
 <%@page import="java.util.ArrayList"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,13 +36,13 @@
               <div>
                   
               </div>
-                  <h2 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre: <%=listaCuentas.get(idx).getUser().getName()%>&nbsp;<%=listaCuentas.get(idx).getUser().getLastName()%><center><img src="<%=listaCuentas.get(idx).getUser().getImage()%>" style="width: 100px; height: 100px"> </center></h2>
+                  <h2 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre: <%=listaCuentas.get(idx).getUser().getName()%>&nbsp;<%=listaCuentas.get(idx).getUser().getLastName()%> <center><img src="<%=listaCuentas.get(idx).getUser().getImage()%>" style="width: 100px; height: 100px"> </center></h2>
             <h2 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descripcion: <%=contratista.getDescription()%></h2>
             <h2 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Precio por Hora: <%=contratista.getPrice()%></h2>
            <center>
                <form action="HacerSolicitud.jsp">            
                <input id="account" name="newPass" value="<%=listaCuentas.get(idx).getUser().getEmail()%>" style="display: none">
-               <button type="submit" class="button" style="background-color: lightgray" >Hacer Solicitud</button>
+               <button type="submit"  class="btn-primary btn-large btn-block" >Hacer Solicitud</button>
            </form>
            </center>
            <br>

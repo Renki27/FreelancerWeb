@@ -53,69 +53,68 @@
                                         </div>
                                         <h1 style="color: gray; margin-top: -2px">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h1>
                                     </center>
-                                   <center> 
-                                    <div id="GenerarSolicitud-conteiner">
-                                        <form action="generarSolicitud.jsp">
-                                            <div>
-                                                <p style="color: white">Select the work Area(s):</p>
+                                    <center> 
+                                        <div id="GenerarSolicitud-conteiner">
+                                            <form action="generarSolicitud.jsp">
+                                                <div>
+                                                    <p style="color: white">Select the work Area(s):</p>
 
-                                                <input class="job-checkbox" type="checkbox"  value="plumbing" id="pb"/>
-                                                <label for="pb"> <span></span>Plumbing</label>
-                                                <input class="job-checkbox" type="checkbox"  value="various-reparations" id="vr"/>
-                                                <label for="vr"> <span></span>Various Reparations</label>
-                                                <input class="job-checkbox" type="checkbox" value="removals" id="rm"/>
-                                                <label for="rm"> <span></span>Removals</label>
-                                                <input class="job-checkbox" type="checkbox" value="electrical-works" id="ew"/>
-                                                <label for="ew"> <span></span>Electrical Works</label>
-                                                <input class="job-checkbox" type="checkbox" value="cleaning" id="cn"/>
-                                                <label for="cn"> <span></span>Cleaning</label>
-                                                <input class="job-checkbox" type="checkbox" value="errands" id="er"/>
-                                                <label for="er"> <span></span>Errands</label>
-                                            </div>
-                                            
+                                                    <input class="job-checkbox" type="checkbox"  value="plumbing" id="pb"/>
+                                                    <label for="pb"> <span></span>Plumbing</label>
+                                                    <input class="job-checkbox" type="checkbox"  value="various-reparations" id="vr"/>
+                                                    <label for="vr"> <span></span>Various Reparations</label>
+                                                    <input class="job-checkbox" type="checkbox" value="removals" id="rm"/>
+                                                    <label for="rm"> <span></span>Removals</label>
+                                                    <input class="job-checkbox" type="checkbox" value="electrical-works" id="ew"/>
+                                                    <label for="ew"> <span></span>Electrical Works</label>
+                                                    <input class="job-checkbox" type="checkbox" value="cleaning" id="cn"/>
+                                                    <label for="cn"> <span></span>Cleaning</label>
+                                                    <input class="job-checkbox" type="checkbox" value="errands" id="er"/>
+                                                    <label for="er"> <span></span>Errands</label>
+                                                </div>
+
                                                 <h2 style="color: white">__________</h2>
-                                            
+
 
                                                 <h2 style="color: white"> Fecha</h2>
                                                 <div class="grid-50" style="width: 100%; margin-top: 20px; display: flex; align-items: center; justify-content: center;">
                                                     <input type="text" id="date" name="date" value="" 
-                                                           autocapitalize="on" autocorrect="off" 
                                                            maxlength="25" required="required" 
-                                                           spellcheck="off"> 
+                                                           > 
                                                 </div>
                                                 <h2 style="color: white">__________</h2>
                                                 <div>
                                                     <p style="color: white">Select the hour:</p>
                                                     <input name="Hour" class="job-checkbox" type="radio"  value="8-9" id="8-9"/>
                                                     <label for="8-9"> <span></span>8:00am - 9:00am</label>
-                                                <input name="Hour" class="job-checkbox" type="radio"  value="10-11" id="10-11"/>
-                                                <label for="10-11"> <span></span>10:00am - 11:00am</label>
-                                                <input name="Hour" class="job-checkbox" type="radio" value="12-1" id="12-1"/>
-                                                <label for="12-1"> <span></span>12:00md - 1:00pm</label>
-                                                <input name="Hour" class="job-checkbox" type="radio" value="2-3" id="2-3"/>
-                                                <label for="2-3"> <span></span>2:00pm - 3:00pm</label>
-                                                <input name="Hour" class="job-checkbox" type="radio" value="4-5" id="4-5"/>
-                                                <label for="4-5"> <span></span>4:00pm - 5:00pm</label> 
+                                                    <input name="Hour" class="job-checkbox" type="radio"  value="10-11" id="10-11"/>
+                                                    <label for="10-11"> <span></span>10:00am - 11:00am</label>
+                                                    <input name="Hour" class="job-checkbox" type="radio" value="12-1" id="12-1"/>
+                                                    <label for="12-1"> <span></span>12:00md - 1:00pm</label>
+                                                    <input name="Hour" class="job-checkbox" type="radio" value="2-3" id="2-3"/>
+                                                    <label for="2-3"> <span></span>2:00pm - 3:00pm</label>
+                                                    <input name="Hour" class="job-checkbox" type="radio" value="4-5" id="4-5"/>
+                                                    <label for="4-5"> <span></span>4:00pm - 5:00pm</label> 
 
-                                                <h2 style="color: white">__________</h2>
-                                                <h3 style="color: white">Descripcion del trabajo</h3>
-                                                <div id="description-ta" class="control-group">
-                                                    <textarea   maxlength="265" name="description" cols="60" rows="4" wrap="hard"  required="required"></textarea>
-                                                </div>       
-                                            </div>
+                                                    <h2 style="color: white">__________</h2>
+                                                    <h3 style="color: white">Descripcion del trabajo</h3>
+                                                    <div id="description-ta" class="control-group">
+                                                        <textarea   maxlength="265" name="description" cols="60" rows="4" wrap="hard"  required="required"></textarea>
+                                                    </div>       
+                                                </div>
                                                 <br>
-                                                <button type="submit"class="boton" style="background-color: green; "> <img class="imagen "src="Images/buscar.png" style="width: 200px"></button>
-                                      
-                                        </form>
-                                         <br>
-                                    </div>
-                                   </center>
+                                                <button type="submit"  class="btn-primary btn-large btn-block"> <img class="imagen " src="Images/buscar.png" alt="no Image"></button>
 
-                                   <div id="VerSolicitudesPendientes-conteiner" style="display:none;">
-                                       <h1>Estoy en ver solicitudes</h1>
-                                   </div>
-                                   <div id="cuenta-conteiner" style="display:none;">
-                                       <center>
+                                            </form>
+                                            <br>
+                                        </div>
+                                    </center>
+
+                                    <div id="VerSolicitudesPendientes-conteiner" style="display:none;">
+                                        <h1>Estoy en ver solicitudes</h1>
+                                    </div>
+                                    <div id="cuenta-conteiner" style="display:none;">
+                                        <center>
                                             <div id="MenuAccount">
                                                 <h1><%=cuenta.getUser().getName()%></h1>
                                                 <button onclick="changePass()">Cambiar contraseña</button>
@@ -143,16 +142,14 @@
                                                         <div class="grid-50">
                                                             <h3 style="color: white">Nombre</h3>
                                                             <input type="text" id="firstname" name="firstname" value="" 
-                                                                   autocapitalize="on" autocomplete="off" autocorrect="off" 
                                                                    maxlength="25" placeholder="<%=user.getName()%>" required="required" 
-                                                                   spellcheck="off"/> 
+                                                                   /> 
                                                         </div>
                                                         <div class="grid-50">
                                                             <h3 style="color: white">Apellido</h3>
                                                             <input type="text" id="lastname" name="lastname" value="" 
-                                                                   autocapitalize="on" autocomplete="off" autocorrect="off" 
                                                                    maxlength="25" placeholder="<%=user.getLastName()%>" required="required" 
-                                                                   spellcheck="off"/> 
+                                                                   /> 
                                                         </div>
 
                                                     </div>
@@ -162,7 +159,7 @@
 
                                                             <div  style="align-content: center">
                                                                 <p>Select you profile picture:</p>
-                                                                <img class="profile-pic grid-100" src="Images/no-thumbnail.jpg" />
+                                                                <img class="profile-pic grid-100" src="Images/no-thumbnail.jpg" alt="Image not Found"/>
                                                                 <label id="load-image-label" class="grid-100" for="upload-photo">Load Image</label>
                                                                 <input onclick="imagePicker()" id="upload-photo" name="image-src" class="file-upload grid-100" type="file" accept="image/*" required="required"/>
                                                             </div>

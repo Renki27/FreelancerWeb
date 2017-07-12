@@ -9,7 +9,7 @@
 <%@page import="java.io.FileOutputStream"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Account"%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 
 <%
     Account account = (Account) session.getAttribute("account");

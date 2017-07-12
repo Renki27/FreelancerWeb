@@ -14,7 +14,7 @@
 <%@page import="java.io.FileInputStream"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Account"%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>    
 
 
 <%
@@ -50,7 +50,7 @@
         }
     }
     if (validatingAccount == null) {
-        response.sendRedirect("Login.jsp?error=Correo o Contraseña incorrectas");
+        response.sendRedirect("Login.jsp?error=Correo o ContraseÃ±a incorrectas");
     } else {
         String accountType = validatingAccount.getAccountType();
         if (validatingAccount.getUser().getPass().equals(password) && validatingAccount.getActivated()) {
@@ -69,7 +69,7 @@
                 request.getSession().setAttribute("accountList", accountList);
                 response.sendRedirect("VerificacionCuenta.jsp");
             } else{
-                 response.sendRedirect("Login.jsp?error=Correo o Contraseña incorrectas");
+                 response.sendRedirect("Login.jsp?error=Correo o ContraseÃ±a incorrectas");
             }
         }
     }
