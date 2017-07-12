@@ -20,11 +20,15 @@ public class ContractorUser extends User {
     private String description;
     private double price;
     private ArrayList<Request> requestList;
-
+<<<<<<< HEAD
     private ArrayList<String> jobList;
-
+<<<<<<< HEAD
+=======
     private ArrayList<String> jobsList;
 
+>>>>>>> Commit
+=======
+>>>>>>> origin/master
     public ContractorUser() {
     }
 
