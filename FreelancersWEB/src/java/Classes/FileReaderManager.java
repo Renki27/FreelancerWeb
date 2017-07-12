@@ -1,19 +1,17 @@
 package Classes;
 
-import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.util.ArrayList;
 
 public class FileReaderManager {
 
     private ObjectInputStream reader;
-    private ArrayList<Account> accountList = new ArrayList();
+    private FileInputStream fIS;
 
     public boolean openFile(String filename) {
         try {
-            reader = new ObjectInputStream(new FileInputStream(filename));
+            fIS = new FileInputStream(filename);
             return true;
         } catch (IOException ex) {
             System.err.println("Error loading file");
@@ -22,20 +20,16 @@ public class FileReaderManager {
         }
     }
 
-    public Account readFile() throws IOException {
+    public Account readFile() {
         Account account = null;
         try {
+            reader = new ObjectInputStream(fIS);
             account = (Account) reader.readObject();
-        } catch (ClassNotFoundException ex) {
-            System.err.println("Object not found");
-            System.err.println(ex);
-        } catch (EOFException ex) {
-              System.err.println("End of the file");
+        } catch (Exception ex) {
             System.err.println(ex);
         }
         return account;
     }
-
 
     public void closeFile() {
         try {

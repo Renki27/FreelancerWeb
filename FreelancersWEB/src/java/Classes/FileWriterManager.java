@@ -1,18 +1,18 @@
 package Classes;
 
-import java.io.BufferedWriter;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class FileWriterManager {
 
+    private FileOutputStream fileOS;
     private ObjectOutputStream writer;
 
     public boolean loadFile(String filename) {
         try {
-            writer = new ObjectOutputStream(new FileOutputStream(filename, true));
+            fileOS = new FileOutputStream(filename, true);
+//            writer = new ObjectOutputStream(new FileOutputStream(filename, true));
             return true;
         } catch (IOException ex) {
             System.err.println("Error creating file");
@@ -23,7 +23,7 @@ public class FileWriterManager {
 
     public boolean loadFileReplace(String filename) {
         try {
-            writer = new ObjectOutputStream(new FileOutputStream(filename));
+            fileOS = new FileOutputStream(filename);
             return true;
         } catch (IOException ex) {
             System.err.println("Error creating file");
@@ -31,9 +31,10 @@ public class FileWriterManager {
             return false;
         }
     }
-
     public void writeFile(Account account) {
+
         try {
+            writer = new ObjectOutputStream(fileOS);
             writer.writeObject(account);
         } catch (IOException | NullPointerException ex) {
             System.err.println("Error writing file");
