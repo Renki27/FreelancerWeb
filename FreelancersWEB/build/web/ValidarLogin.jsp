@@ -49,13 +49,10 @@
             validatingAccount = accountList.get(idx);
         }
     }
-    System.out.println("mi cuenta es " + validatingAccount.getUser().getName());
     if (validatingAccount == null) {
         response.sendRedirect("Login.jsp?error=Correo o Contraseña incorrectas");
     } else {
         String accountType = validatingAccount.getAccountType();
-
-        //  System.out.println("valido esto " + validatingAccount.getActivated());
         if (validatingAccount.getUser().getPass().equals(password) && validatingAccount.getActivated()) {
             request.getSession().setAttribute("account", validatingAccount);
             request.getSession().setAttribute("accountList", accountList);
@@ -70,8 +67,9 @@
             if (validatingAccount.getUser().getPass().equals(password) && !validatingAccount.getActivated()) {
                 request.getSession().setAttribute("account", validatingAccount);
                 request.getSession().setAttribute("accountList", accountList);
-                System.out.println("C mamut");
                 response.sendRedirect("VerificacionCuenta.jsp");
+            } else{
+                 response.sendRedirect("Login.jsp?error=Correo o Contraseña incorrectas");
             }
         }
     }

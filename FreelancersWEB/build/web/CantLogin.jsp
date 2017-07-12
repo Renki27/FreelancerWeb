@@ -35,7 +35,7 @@
                                         <input type="text" id="email" name="email" value="" 
                                                autocapitalize="on" autocomplete="off" autocorrect="off" 
                                                maxlength="25" required="required" 
-                                               spellcheck="off">/> 
+                                               spellcheck="off"> 
                                     </div>
 
                                     <center>

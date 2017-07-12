@@ -32,10 +32,12 @@
     %>
 
     <body class="static-bg">
-        <div class="main-container">
-            <h1 class="logo">Account Login</h1>
+        <div class="main-container" style="margin-top: 120px">
+           
             <div class="login-box">
-
+                <center>
+                <h1 style="color: white; font-family: Times New Roman; text-decoration: underline;">Account Login</h1>
+                </center>
                 <div class="input" id="login-wrapper">
                     <div class="login" >
 

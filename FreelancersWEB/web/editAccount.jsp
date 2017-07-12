@@ -22,7 +22,7 @@
     ArrayList<Account> listaCuentas = (ArrayList) session.getAttribute("accountList");
     ContractorUser contratista = (ContractorUser) account.getUser();
 
-    String description = request.getParameter("description");;
+    String description = request.getParameter("description");
     String imageURL = "NO IMAGE";
     double price;
     String priceS = request.getParameter("price");
@@ -34,7 +34,9 @@
     String password = account.getUser().getPass();
     String id = contratista.getId();
     String phone = contratista.getPhone();
-    ArrayList <String> jobsList = null;
+    ArrayList <String> jobsList = contratista.getJobsList();
+    
+    
     
     DirectorUser directorUser = new DirectorUser();
     ContractorUserBuilder contractorBuilder = new ContractorUserBuilder();

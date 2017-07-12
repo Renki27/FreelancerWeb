@@ -6,6 +6,7 @@
 package Classes;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,6 +19,7 @@ public class User implements Serializable {
     private String email;
     private String pass;
     private String image;
+    private ArrayList <Request> requestList = new ArrayList(); 
 
     public User() {
     }
@@ -30,6 +32,16 @@ public class User implements Serializable {
         this.image = image;
     }
 
+    public ArrayList<Request> getRequestList() {
+        return requestList;
+    }
+
+    public void setRequestList(ArrayList<Request> requestList) {
+        this.requestList = requestList;
+    }
+
+    
+    
     public String getName() {
         return name;
     }

@@ -46,8 +46,13 @@
                                         <div>
                                             <button id="Agenda" onclick="menuSelector('Agenda')" value="Agenda" class="button" >Agenda</button>
                                             <button id="Bandeja" onclick="menuSelector('Bandeja')" value="Bandeja" class="button" >Bandeja de entrada</button>
-                                            <button id="Cuenta" onclick="menuSelector('Cuenta')" value="Cuenta" class="button" >Cuenta</button>                                  
+                                            <button id="Cuenta" onclick="menuSelector('Cuenta')" value="Cuenta" class="button" >Cuenta</button>
+                                            <form action="CerrarSesion.jsp">
+                                                <br>
+                                            <button id="Cerrar" value="CerrarSesion" class="button">CerrarSesion</button>
+                                            </form>                                            
                                         </div>
+                                        <h1 style="color: gray; margin-top: -2px">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h1>
                                     </center>
 
                                     <div id="agenda-conteiner">
@@ -125,7 +130,7 @@
                                                 <button onclick="changePass()">Cambiar contraseña</button>
                                                 <button onclick="editAccount()">Editar Cuenta</button>  
                                             </div>
-
+<br>
 
                                             <div id="changePassword" style="display: none">
                                                 <form action="changePassword.jsp" method="post">                                           
@@ -201,9 +206,14 @@
                                                     <br>
                                                     <br>
                                                     <div>
+                                                        <center>
+                                                            <h4 style="color: white">Nota: Para que el cambio se haga efectivo, debera cerrar sesion</h4>
+                                                        </center>
                                                         <button type="submit"> Enviar </button>
+                                                        
                                                     </div>
-                                                </form>                                          
+                                                </form>
+                                                    <br>
                                             </div>      
 
 
