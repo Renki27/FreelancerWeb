@@ -37,7 +37,7 @@
        String hour = request.getParameter("Hour");
        boolean value = false;
        Request myRequest = new Request(customerName, descripcion, "Costa Rica", date, hour);
-    
+    System.out.println("");
        contratista.addRequest(myRequest);
       
        cuentaUser.getUser().addRequest(myRequest);
