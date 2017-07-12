@@ -4,12 +4,13 @@
     Author     : alelizmu
 --%>
 
+<<<<<<< HEAD
 <%@page import="Classes.ContractorUser"%>
 <%@page import="Classes.FileWriterManager"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Account"%>
 <%@page import="Classes.Request"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 <!DOCTYPE html>
 <html>
     <head>

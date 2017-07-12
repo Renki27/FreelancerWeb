@@ -6,7 +6,7 @@
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Account"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,13 +16,12 @@
         <link href="CSS/SignUp.css" rel="stylesheet">
         <link href="CSS/cantLogin.css" rel="stylesheet">
     </head>
- 
+    <body class="static-bg">
         <%
             Account cuenta = (Account) session.getAttribute("account");
-        //    ArrayList<Account> accountList = (ArrayList) session.getAttribute("accountList");
+            //    ArrayList<Account> accountList = (ArrayList) session.getAttribute("accountList");
 
         %>
-    <body class="static-bg">
         <div class="main-container" style="margin-top: 100px;">
             <div class="creation-container">
                 <div class="box-box"> 
@@ -36,13 +35,13 @@
                                     <h3 style="text-align: center; color: white; padding-top: 50px;">Hello! <%=cuenta.getUser().getName()%> Your account has not been activated yet, Please open your mail and paste the code here!</h3>
                                     <div>
                                         <center>
-                                        <input type="text" id="verification-code" name="verificationCode" value="" 
-                                                required="required" 
-                                               >
+                                            <input type="text" id="verification-code" name="verificationCode" value="" 
+                                                   required="required" 
+                                                  >
                                         </center>
                                     </div>
                                     <div id="signup-submit" >                       
-                                        <button type="submit"class="boton"> <img class="imagen "src="Images/Enviar.png" ></button>
+                                        <button type="submit" class="btn-primary btn-large btn-block">Submit</button>
                                     </div>
                                 </form>  
                             </div>

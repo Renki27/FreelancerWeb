@@ -4,7 +4,7 @@
     Author     : alelizmu
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="false" errorPage="ErrorPage.jsp"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,14 +34,14 @@
                                     <h3 class="textoPregunta">¿Cual fue el nombre de tu primer mascota?</h3>
                                     <div class="preguntas">
                                         <input type="text" id="pregunta1" name="pregunta1" value="" 
-                                                required="required" 
+                                               required="required" 
                                                >
                                     </div>
                                     <h2 class="linea">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
                                     <h3 class="textoPregunta">¿Cual es tu artista favorito?</h3>
                                     <div class="preguntas">
                                         <input type="text" id="pregunta2" name="pregunta2" value="" 
-                                                required="required" 
+                                               required="required" 
                                                >
                                     </div>
                                     <h2 class="linea">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
@@ -55,21 +55,21 @@
                                     <h3 class="textoPregunta">¿Cual es tu fruta favorita?</h3>
                                     <div class="preguntas">
                                         <input type="text" id="pregunta4" name="pregunta4" value="" 
-                                                required="required" 
+                                               required="required" 
                                                >
                                     </div>
                                     <h2 class="linea">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
                                     <h3 class="textoPregunta">¿Cual es tu color favorito?</h3>
                                     <div class="preguntas">
                                         <input type="text" id="pregunta5" name="pregunta5" value="" 
-                                                required="required" 
+                                               required="required" 
                                                >
                                     </div> 
 
                                     <input type="text" id="email" name="email" value="<%=email%>" style="visibility: hidden">
                                     <h2 class="linea">-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-</h2>
                                     <div id="signup-submit" >                                  
-                                        <button type="submit"class="boton"> <img class="imagen "src="Images/Enviar.png" ></button>
+                                        <button type="submit"  class="btn-primary btn-large btn-block">Send</button>
                                     </div>
                                 </form>
 
